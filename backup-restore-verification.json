@@ -1,0 +1,45 @@
+{
+  "source_database": "enkhmend_isms",
+  "restore_database": "enkhmend_restore_check_20261116",
+  "checked_at_utc": "2026-11-16T14:15:03.163911+00:00",
+  "elapsed_seconds": 12.19,
+  "tables": {
+    "product_template": {
+      "source": 10,
+      "restored": 10
+    },
+    "project_task": {
+      "source": 16,
+      "restored": 16
+    },
+    "helpdesk_ticket": {
+      "source": 1,
+      "restored": 1
+    },
+    "res_users": {
+      "source": 9,
+      "restored": 9
+    },
+    "auditlog_rule": {
+      "source": 6,
+      "restored": 6
+    },
+    "auditlog_log": {
+      "source": 22,
+      "restored": 22
+    },
+    "x_enkhmend_control": {
+      "source": 25,
+      "restored": 25
+    },
+    "x_enkhmend_policy": {
+      "source": 3,
+      "restored": 3
+    }
+  },
+  "filestore_files": 46,
+  "attachments_verified": 89,
+  "database_dump_sha256": "51b4fa8a2b2ccb3edb8d7ddf2e884876afc76f389bdbdc7e27bbe69813f82ff2",
+  "filestore_zip_sha256": "d84e692b03fb944a42dad3633224dba769516cede0923c2bb7ee24b48ae46ffb",
+  "scope": "Local backup and restore validation. Not offsite backup, business RTO approval, or full disaster recovery."
+}

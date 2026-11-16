@@ -1,0 +1,74 @@
+{
+  "counts": {
+    "assets": 10,
+    "risks": 10,
+    "controls": 25,
+    "policies": 3
+  },
+  "audit_rules": 6,
+  "risk_stage": "Assessed",
+  "incident_stage": "Close",
+  "governance_permissions": [
+    {
+      "role": "viewer",
+      "model": "x_enkhmend_control",
+      "read_count": 25,
+      "write_allowed": false
+    },
+    {
+      "role": "viewer",
+      "model": "x_enkhmend_policy",
+      "read_count": 3,
+      "write_allowed": false
+    },
+    {
+      "role": "asset",
+      "model": "x_enkhmend_control",
+      "read_count": 25,
+      "write_allowed": false
+    },
+    {
+      "role": "asset",
+      "model": "x_enkhmend_policy",
+      "read_count": 3,
+      "write_allowed": false
+    },
+    {
+      "role": "analyst",
+      "model": "x_enkhmend_control",
+      "read_count": 25,
+      "write_allowed": false
+    },
+    {
+      "role": "analyst",
+      "model": "x_enkhmend_policy",
+      "read_count": 3,
+      "write_allowed": false
+    },
+    {
+      "role": "responder",
+      "model": "x_enkhmend_control",
+      "read_count": 25,
+      "write_allowed": false
+    },
+    {
+      "role": "responder",
+      "model": "x_enkhmend_policy",
+      "read_count": 3,
+      "write_allowed": false
+    },
+    {
+      "role": "manager",
+      "model": "x_enkhmend_control",
+      "read_count": 25,
+      "write_allowed": true
+    },
+    {
+      "role": "manager",
+      "model": "x_enkhmend_policy",
+      "read_count": 3,
+      "write_allowed": true
+    }
+  ],
+  "status": "pass"
+}

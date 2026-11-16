@@ -1,0 +1,532 @@
+{
+  "organization": "Энхмэнд эмнэлэг",
+  "database": "enkhmend_isms",
+  "date": "2026-11-16",
+  "assets": [
+    {
+      "id": 1,
+      "code": "EM-AST-01",
+      "name": "Өвчтөний мэдээллийн сан",
+      "description": "<div data-oe-version=\"2.0\">Owner: IT хариуцсан ажилтан</div><div>Classification: Restricted</div><div>Location: Энхмэнд эмнэлгийн үндсэн сервер</div><div>Risk: High</div><div>Purpose: Өвчтөний мэдээллийг хадгалах</div>"
+    },
+    {
+      "id": 2,
+      "code": "EM-AST-02",
+      "name": "Лабораторийн хариуны сан",
+      "description": "<div data-oe-version=\"2.0\">Owner: Лабораторийн эрхлэгч</div><div>Classification: Restricted</div><div>Location: Энхмэнд эмнэлгийн лабораторийн систем</div><div>Risk: High</div><div>Purpose: Лабораторийн шинжилгээний хариуг хадгалах</div>"
+    },
+    {
+      "id": 3,
+      "code": "EM-AST-03",
+      "name": "Эмнэлгийн үндсэн сервер",
+      "description": "<div data-oe-version=\"2.0\">Owner: IT ажилтан</div><div>Classification: Confidential</div><div>Location: Серверийн өрөө</div><div>Risk: High</div><div>Purpose: Эмнэлгийн мэдээллийн систем болон мэдээллийн санг ажиллуулах.</div>"
+    },
+    {
+      "id": 4,
+      "code": "EM-AST-04",
+      "name": "Эмчийн компьютер",
+      "description": "<div data-oe-version=\"2.0\">Owner: Тасгийн эрхлэгч</div><div>Classification: Confidential</div><div>Location: Үзлэгийн өрөө</div><div>Risk: High</div><div>Purpose: Эмч өвчтөний мэдээлэлтэй ажиллах, үзлэгийн тэмдэглэл оруулах.</div>"
+    },
+    {
+      "id": 5,
+      "code": "EM-AST-05",
+      "name": "Бүртгэлийн компьютер",
+      "description": "<div data-oe-version=\"2.0\">Owner: Бүртгэлийн ахлах</div><div>Classification: Confidential</div><div>Location: Хүлээн авах хэсэг</div><div>Risk: High</div><div>Purpose: Өвчтөнийг бүртгэх, цаг товлох, бүртгэлийн мэдээлэл боловсруулах.</div>"
+    },
+    {
+      "id": 6,
+      "code": "EM-AST-06",
+      "name": "Backup төхөөрөмж/сан",
+      "description": "<div data-oe-version=\"2.0\">Owner: IT ажилтан</div><div>Classification: Restricted</div><div>Location: Нөөц хадгалалт</div><div>Risk: High</div><div>Purpose: Эмнэлгийн систем, мэдээллийн сангийн нөөц хуулбарыг хадгалах, шаардлагатай үед сэргээх.</div>"
+    },
+    {
+      "id": 7,
+      "code": "EM-AST-07",
+      "name": "Firewall, Router",
+      "description": "<div data-oe-version=\"2.0\">Owner: Сүлжээний ажилтан</div><div>Classification: Confidential</div><div>Location: Сүлжээний шүүгээ</div><div>Risk: High</div><div>Purpose: Эмнэлгийн сүлжээний холболт, урсгал болон гаднын хандалтыг удирдах.</div>"
+    },
+    {
+      "id": 8,
+      "code": "EM-AST-08",
+      "name": "Ажилтны мэдээллийн сан",
+      "description": "<div data-oe-version=\"2.0\">Owner: Хүний нөөц</div><div>Classification: Confidential</div><div>Location: HR систем</div><div>Risk: Medium</div><div>Purpose: Ажилтны бүртгэл, албан тушаал болон хөдөлмөрийн харилцааны мэдээллийг хадгалах.</div>"
+    },
+    {
+      "id": 9,
+      "code": "EM-AST-09",
+      "name": "Төлбөр тооцооны бүртгэл",
+      "description": "<div data-oe-version=\"2.0\">Owner: Нягтлан</div><div>Classification: Confidential</div><div>Location: Санхүүгийн систем</div><div>Risk: Medium</div><div>Purpose: Эмнэлгийн үйлчилгээний төлбөр, нэхэмжлэл болон санхүүгийн гүйлгээний бүртгэлийг хадгалах.</div>"
+    },
+    {
+      "id": 10,
+      "code": "EM-AST-10",
+      "name": "Системийн audit logs",
+      "description": "<div data-oe-version=\"2.0\">Owner: Аюулгүй байдлын хариуцагч</div><div>Classification: Restricted</div><div>Location: Логийн сан</div><div>Risk: High</div><div>Purpose: Системийн хэрэглэгчийн үйлдэл, өөрчлөлтийг бүртгэж, хяналт болон зөрчлийн шинжилгээнд ашиглах.</div>"
+    }
+  ],
+  "risks": [
+    {
+      "id": 2,
+      "name": "EM-R01 — Өвчтөний мэдээлэл зөвшөөрөлгүй задрах",
+      "description": "Asset: EM-AST-01 — Өвчтөний мэдээллийн санThreat:Зөвшөөрөлгүй этгээд өвчтөний мэдээлэлд хандах.Vulnerability:Ажилтанд хэрэгцээнээс давсан эрх олгосон.Likelihood: 4Impact: 5Risk Score: 4 × 5 = 20Risk Level: HighTreatment:Албан үүрэгт тохирсон эрх олгох.Хэрэглэгчийн эрхийг тогтмол шалгах.Мэдээллийн өөрчлөлтийг audit log-д бүртгэх.Related Controls:A.5.15, A.5.18, A.8.3Likelihood: 4 — Магадлал өндөр.Ажилтанд хэрэгцээнээс давсан эрх олгосон, дундын бүртгэл ашигладаг гэж кейст үзсэн тул зөвшөөрөлгүй хандалт үүсэх боломж өндөр.Impact: 5 — Маш ноцтой.Өвчтөний нууц мэдээлэл задрах нь хувийн нууц болон эмнэлэгт итгэх итгэлд маш ноцтой нөлөөлнө.Risk Score: 4 × 5 = 20Risk Level: High",
+      "html": "<div data-oe-version=\"2.0\" data-last-history-steps=\"3581263690550190\">Asset: EM-AST-01 — Өвчтөний мэдээллийн сан</div><div><br></div><div>Threat:</div><div>Зөвшөөрөлгүй этгээд өвчтөний мэдээлэлд хандах.</div><div><br></div><div>Vulnerability:</div><div>Ажилтанд хэрэгцээнээс давсан эрх олгосон.</div><div><br></div><div>Likelihood: 4</div><div>Impact: 5</div><div>Risk Score: 4 × 5 = 20</div><div>Risk Level: High</div><div><br></div><div>Treatment:</div><div>Албан үүрэгт тохирсон эрх олгох.</div><div>Хэрэглэгчийн эрхийг тогтмол шалгах.</div><div>Мэдээллийн өөрчлөлтийг audit log-д бүртгэх.</div><div><br></div><div>Related Controls:</div><div>A.5.15, A.5.18, A.8.3</div><div><br></div><div>Likelihood: 4 — Магадлал өндөр.</div><div>Ажилтанд хэрэгцээнээс давсан эрх олгосон, дундын бүртгэл ашигладаг гэж кейст үзсэн тул зөвшөөрөлгүй хандалт үүсэх боломж өндөр.</div><div><br></div><div>Impact: 5 — Маш ноцтой.</div><div>Өвчтөний нууц мэдээлэл задрах нь хувийн нууц болон эмнэлэгт итгэх итгэлд маш ноцтой нөлөөлнө.</div><div><br></div><div>Risk Score: 4 × 5 = 20</div><div>Risk Level: High</div>",
+      "stage": "Assessed",
+      "owner": [
+        "Risk Analyst - Enkhmend"
+      ],
+      "deadline": "2026-12-16 00:00:00"
+    },
+    {
+      "id": 3,
+      "name": "EM-R02 — Лабораторийн хариу буруу өөрчлөгдөх",
+      "description": "Asset:EM-AST-02 — Лабораторийн хариуны санRisk Owner:Лабораторийн эрхлэгчThreat:Шинжилгээний хариуг санамсаргүй эсвэл санаатайгаар буруу өөрчлөх.Vulnerability:Хариу засах эрх хэт өргөн, өөрчлөлтийн хяналт болон баталгаажуулалт хангалтгүй.Likelihood: 3Impact: 5Risk Score: 3 × 5 = 15Risk Level: HighPotential Consequences:Шинжилгээний мэдээллийн бүрэн бүтэн байдал алдагдаж, эмчилгээний шийдвэрт сөргөөр нөлөөлөх.Treatment Plan:1. Хариу оруулах, баталгаажуулах үүргийг ялгах.2. Зөвхөн эрх бүхий ажилтанд засварлах эрх олгох.3. Өөрчлөлтийн өмнөх болон дараах утгыг бүртгэх.4. Хариу зассан шалтгааныг баримтжуулах.Related ISO Controls:A.5.3 — Segregation of dutiesA.8.3 — Information access restrictionA.8.15 — LoggingCompletion Evidence:Эрхийн хүснэгт, баталгаажуулах журам, өөрчлөлтийн логийн жишээ.Likelihood: 3 — Тохиолдож болзошгүй.Хариу засах эрх өргөн, давхар баталгаажуулалт хангалтгүй гэж үзсэн тул санамсаргүй эсвэл санаатай өөрчлөлт гарах боломжтой.Impact: 5 — Маш ноцтой.Буруу шинжилгээний хариу нь оношилгоо, эмчилгээний шийдвэрт сөргөөр нөлөөлж болзошгүй.Risk Score: 3 × 5 = 15Risk Level: High",
+      "html": "<div data-oe-version=\"2.0\" data-last-history-steps=\"299547546900045\">Asset:</div><div>EM-AST-02 — Лабораторийн хариуны сан</div><div><br></div><div>Risk Owner:</div><div>Лабораторийн эрхлэгч</div><div><br></div><div>Threat:</div><div>Шинжилгээний хариуг санамсаргүй эсвэл санаатайгаар буруу өөрчлөх.</div><div><br></div><div>Vulnerability:</div><div>Хариу засах эрх хэт өргөн, өөрчлөлтийн хяналт болон баталгаажуулалт хангалтгүй.</div><div><br></div><div>Likelihood: 3</div><div>Impact: 5</div><div>Risk Score: 3 × 5 = 15</div><div>Risk Level: High</div><div><br></div><div>Potential Consequences:</div><div>Шинжилгээний мэдээллийн бүрэн бүтэн байдал алдагдаж, эмчилгээний шийдвэрт сөргөөр нөлөөлөх.</div><div><br></div><div>Treatment Plan:</div><div>1. Хариу оруулах, баталгаажуулах үүргийг ялгах.</div><div>2. Зөвхөн эрх бүхий ажилтанд засварлах эрх олгох.</div><div>3. Өөрчлөлтийн өмнөх болон дараах утгыг бүртгэх.</div><div>4. Хариу зассан шалтгааныг баримтжуулах.</div><div><br></div><div>Related ISO Controls:</div><div>A.5.3 — Segregation of duties</div><div>A.8.3 — Information access restriction</div><div>A.8.15 — Logging</div><div><br></div><div>Completion Evidence:</div><div>Эрхийн хүснэгт, баталгаажуулах журам, өөрчлөлтийн логийн жишээ.</div><div><br></div><div>Likelihood: 3 — Тохиолдож болзошгүй.</div><div>Хариу засах эрх өргөн, давхар баталгаажуулалт хангалтгүй гэж үзсэн тул санамсаргүй эсвэл санаатай өөрчлөлт гарах боломжтой.</div><div><br></div><div>Impact: 5 — Маш ноцтой.</div><div>Буруу шинжилгээний хариу нь оношилгоо, эмчилгээний шийдвэрт сөргөөр нөлөөлж болзошгүй.</div><div><br></div><div>Risk Score: 3 × 5 = 15</div><div>Risk Level: High</div>",
+      "stage": "Assessed",
+      "owner": [
+        "Risk Analyst - Enkhmend"
+      ],
+      "deadline": "2026-12-16 00:00:00"
+    },
+    {
+      "id": 4,
+      "name": "EM-R03 — Эмнэлгийн үндсэн сервер тасалдах",
+      "description": "Asset:EM-AST-03 — Эмнэлгийн үндсэн серверRisk Owner:IT ажилтанThreat:Техник төхөөрөмжийн гэмтэл, цахилгааны тасалдал эсвэл системийн алдаанаас сервер ажиллахгүй болох.Vulnerability:Тасралтгүй тэжээлийн хамгаалалт болон сэргээх төлөвлөгөө хангалтгүй, сэргээх ажиллагааг туршаагүй.Likelihood: 3Impact: 5Risk Score: 3 × 5 = 15Risk Level: HighPotential Consequences:Өвчтөн бүртгэх, мэдээлэл харах болон лабораторийн үйлчилгээ саатах.Treatment Plan:1. Тасралтгүй тэжээлийн төхөөрөмжийн ажиллагааг шалгах.2. Серверийн төлөв, нөөц ашиглалтыг хянах.3. Сэргээх дараалал, хариуцагчийг тодорхойлох.4. Backup-аас сэргээх туршилт хийх.5. Сэргээх хугацааны зорилтыг эмнэлгийн удирдлагатай тохирох.Related ISO Controls:A.5.30 — ICT readiness for business continuityA.8.13 — Information backupA.8.16 — Monitoring activitiesCompletion Evidence:Сэргээх төлөвлөгөө, туршилтын үр дүн, бодитоор зарцуулсан хугацааны бүртгэл.Likelihood: 3 — Тохиолдож болзошгүй.Төхөөрөмжийн гэмтэл, цахилгааны тасалдал, системийн алдаа гарах боломжтой бөгөөд сэргээх ажиллагааг туршаагүй гэж үзсэн.Impact: 5 — Маш ноцтой.Үндсэн сервер тасалдвал өвчтөн бүртгэх, мэдээлэл харах болон лабораторийн мэдээлэл ашиглах ажиллагаа зэрэг саатна.Risk Score: 3 × 5 = 15Risk Level: High",
+      "html": "<div data-oe-version=\"2.0\" data-last-history-steps=\"1341765477185683\">Asset:</div><div>EM-AST-03 — Эмнэлгийн үндсэн сервер</div><div><br></div><div>Risk Owner:</div><div>IT ажилтан</div><div><br></div><div>Threat:</div><div>Техник төхөөрөмжийн гэмтэл, цахилгааны тасалдал эсвэл системийн алдаанаас сервер ажиллахгүй болох.</div><div><br></div><div>Vulnerability:</div><div>Тасралтгүй тэжээлийн хамгаалалт болон сэргээх төлөвлөгөө хангалтгүй, сэргээх ажиллагааг туршаагүй.</div><div><br></div><div>Likelihood: 3</div><div>Impact: 5</div><div>Risk Score: 3 × 5 = 15</div><div>Risk Level: High</div><div><br></div><div>Potential Consequences:</div><div>Өвчтөн бүртгэх, мэдээлэл харах болон лабораторийн үйлчилгээ саатах.</div><div><br></div><div>Treatment Plan:</div><div>1. Тасралтгүй тэжээлийн төхөөрөмжийн ажиллагааг шалгах.</div><div>2. Серверийн төлөв, нөөц ашиглалтыг хянах.</div><div>3. Сэргээх дараалал, хариуцагчийг тодорхойлох.</div><div>4. Backup-аас сэргээх туршилт хийх.</div><div>5. Сэргээх хугацааны зорилтыг эмнэлгийн удирдлагатай тохирох.</div><div><br></div><div>Related ISO Controls:</div><div>A.5.30 — ICT readiness for business continuity</div><div>A.8.13 — Information backup</div><div>A.8.16 — Monitoring activities</div><div><br></div><div>Completion Evidence:</div><div>Сэргээх төлөвлөгөө, туршилтын үр дүн, бодитоор зарцуулсан хугацааны бүртгэл.</div><div><br></div><div>Likelihood: 3 — Тохиолдож болзошгүй.</div><div>Төхөөрөмжийн гэмтэл, цахилгааны тасалдал, системийн алдаа гарах боломжтой бөгөөд сэргээх ажиллагааг туршаагүй гэж үзсэн.</div><div><br></div><div>Impact: 5 — Маш ноцтой.</div><div>Үндсэн сервер тасалдвал өвчтөн бүртгэх, мэдээлэл харах болон лабораторийн мэдээлэл ашиглах ажиллагаа зэрэг саатна.</div><div><br></div><div>Risk Score: 3 × 5 = 15</div><div>Risk Level: High</div>",
+      "stage": "Assessed",
+      "owner": [
+        "Risk Analyst - Enkhmend"
+      ],
+      "deadline": "2026-12-16 00:00:00"
+    },
+    {
+      "id": 5,
+      "name": "EM-R04 — Эмчийн компьютер malware-д өртөх",
+      "description": "Asset:EM-AST-04 — Эмчийн компьютерRisk Owner:Тасгийн эрхлэгчТехникийн арга хэмжээ хариуцах: IT ажилтанThreat:Хортой файл, программ эсвэл холбоосоор дамжин компьютер халдварлах.Vulnerability:Үйлдлийн систем болон программ шинэчлэгдээгүй, зөвшөөрөлгүй программ суулгах боломжтой.Likelihood: 4Impact: 4Risk Score: 4 × 4 = 16Risk Level: HighPotential Consequences:Өвчтөний мэдээлэл алдагдах, файл шифрлэгдэх, эмчийн ажил саатах.Treatment Plan:1. Endpoint protection ашиглаж, ажиллагааг хянах.2. Үйлдлийн систем болон программыг тогтмол шинэчлэх.3. Энгийн хэрэглэгчийн админ эрхийг хязгаарлах.4. Зөвшөөрөгдсөн программын жагсаалт гаргах.5. Сэжигтэй файл, холбоосын талаар ажилтанд сургалт өгөх.Related ISO Controls:A.8.7 — Protection against malwareA.8.8 — Management of technical vulnerabilitiesA.6.3 — Information security awareness, education and trainingCompletion Evidence:Хамгаалалтын төлөв, шинэчлэлтийн бүртгэл, хэрэглэгчийн эрхийн шалгалт, сургалтын бүртгэл.Likelihood: 4 — Магадлал өндөр.Программын шинэчлэлт тогтмол хийгддэггүй, зөвшөөрөлгүй программ суулгах боломжтой гэж үзсэн тул халдварлах магадлал өндөр.Impact: 4 — Ноцтой.Компьютерт байгаа мэдээлэл алдагдах, файл шифрлэгдэх, эмчийн ажлын ажиллагаа саатах боломжтой.Risk Score: 4 × 4 = 16Risk Level: High",
+      "html": "<div data-oe-version=\"2.0\" data-last-history-steps=\"857059923191757\">Asset:</div><div>EM-AST-04 — Эмчийн компьютер</div><div><br></div><div>Risk Owner:</div><div>Тасгийн эрхлэгч</div><div>Техникийн арга хэмжээ хариуцах: IT ажилтан</div><div><br></div><div>Threat:</div><div>Хортой файл, программ эсвэл холбоосоор дамжин компьютер халдварлах.</div><div><br></div><div>Vulnerability:</div><div>Үйлдлийн систем болон программ шинэчлэгдээгүй, зөвшөөрөлгүй программ суулгах боломжтой.</div><div><br></div><div>Likelihood: 4</div><div>Impact: 4</div><div>Risk Score: 4 × 4 = 16</div><div>Risk Level: High</div><div><br></div><div>Potential Consequences:</div><div>Өвчтөний мэдээлэл алдагдах, файл шифрлэгдэх, эмчийн ажил саатах.</div><div><br></div><div>Treatment Plan:</div><div>1. Endpoint protection ашиглаж, ажиллагааг хянах.</div><div>2. Үйлдлийн систем болон программыг тогтмол шинэчлэх.</div><div>3. Энгийн хэрэглэгчийн админ эрхийг хязгаарлах.</div><div>4. Зөвшөөрөгдсөн программын жагсаалт гаргах.</div><div>5. Сэжигтэй файл, холбоосын талаар ажилтанд сургалт өгөх.</div><div><br></div><div>Related ISO Controls:</div><div>A.8.7 — Protection against malware</div><div>A.8.8 — Management of technical vulnerabilities</div><div>A.6.3 — Information security awareness, education and training</div><div><br></div><div>Completion Evidence:</div><div>Хамгаалалтын төлөв, шинэчлэлтийн бүртгэл, хэрэглэгчийн эрхийн шалгалт, сургалтын бүртгэл.</div><div><br></div><div>Likelihood: 4 — Магадлал өндөр.</div><div>Программын шинэчлэлт тогтмол хийгддэггүй, зөвшөөрөлгүй программ суулгах боломжтой гэж үзсэн тул халдварлах магадлал өндөр.</div><div><br></div><div>Impact: 4 — Ноцтой.</div><div>Компьютерт байгаа мэдээлэл алдагдах, файл шифрлэгдэх, эмчийн ажлын ажиллагаа саатах боломжтой.</div><div><br></div><div>Risk Score: 4 × 4 = 16</div><div>Risk Level: High</div>",
+      "stage": "Assessed",
+      "owner": [
+        "Risk Analyst - Enkhmend"
+      ],
+      "deadline": "2026-12-16 00:00:00"
+    },
+    {
+      "id": 6,
+      "name": "EM-R05 — Бүртгэлийн ажилтан phishing-д өртөх",
+      "description": "Asset:EM-AST-05 — Бүртгэлийн компьютер​Risk Owner:Бүртгэлийн ахлах​Threat:Хуурамч имэйл эсвэл нэвтрэх хуудсаар хэрэглэгчийн нууц үгийг авах.​Vulnerability:Ажилтан phishing таних мэдлэг хангалтгүй, нэвтрэлт зөвхөн нууц үгээр хамгаалагдсан.​Likelihood: 4Impact: 4Risk Score: 4 × 4 = 16Risk Level: High​Potential Consequences:Хэрэглэгчийн бүртгэл алдагдаж, өвчтөний мэдээлэлд зөвшөөрөлгүй хандах.​Treatment Plan:1. Phishing таних сургалт зохион байгуулах.2. Боломжтой системд олон хүчин зүйлийн баталгаажуулалт ашиглах.3. Сэжигтэй имэйл мэдээлэх сувгийг тодорхойлох.4. Эрх бүхий, хоргүй сургалтын дасгал хийж үр дүнг үнэлэх.​Related ISO Controls:A.6.3 — Information security awareness, education and trainingA.6.8 — Information security event reportingA.8.5 — Secure authentication​Completion Evidence:Сургалтын бүртгэл, баталгаажуулалтын тохиргоо, мэдээлэх журмын баримт.Likelihood: 4 — Магадлал өндөр.Phishing таних сургалт хангалтгүй, нэвтрэлт зөвхөн нууц үгээр хамгаалагдсан гэж үзсэн тул хуурамч холбоосоор бүртгэлээ алдах магадлал өндөр.Impact: 4 — Ноцтой.Алдагдсан бүртгэлээр өвчтөний мэдээлэлд хандах, бүртгэлийн мэдээлэл өөрчлөх боломж үүснэ.Risk Score: 4 × 4 = 16Risk Level: High",
+      "html": "<div data-oe-version=\"2.0\" data-last-history-steps=\"2899859013706779\">Asset:</div><div>EM-AST-05 — Бүртгэлийн компьютер</div><div>​</div><div>Risk Owner:</div><div>Бүртгэлийн ахлах</div><div>​</div><div>Threat:</div><div>Хуурамч имэйл эсвэл нэвтрэх хуудсаар хэрэглэгчийн нууц үгийг авах.</div><div>​</div><div>Vulnerability:</div><div>Ажилтан phishing таних мэдлэг хангалтгүй, нэвтрэлт зөвхөн нууц үгээр хамгаалагдсан.</div><div>​</div><div>Likelihood: 4</div><div>Impact: 4</div><div>Risk Score: 4 × 4 = 16</div><div>Risk Level: High</div><div>​</div><div>Potential Consequences:</div><div>Хэрэглэгчийн бүртгэл алдагдаж, өвчтөний мэдээлэлд зөвшөөрөлгүй хандах.</div><div>​</div><div>Treatment Plan:</div><div>1. Phishing таних сургалт зохион байгуулах.</div><div>2. Боломжтой системд олон хүчин зүйлийн баталгаажуулалт ашиглах.</div><div>3. Сэжигтэй имэйл мэдээлэх сувгийг тодорхойлох.</div><div>4. Эрх бүхий, хоргүй сургалтын дасгал хийж үр дүнг үнэлэх.</div><div>​</div><div>Related ISO Controls:</div><div>A.6.3 — Information security awareness, education and training</div><div>A.6.8 — Information security event reporting</div><div>A.8.5 — Secure authentication</div><div>​</div><div>Completion Evidence:</div><div>Сургалтын бүртгэл, баталгаажуулалтын тохиргоо, мэдээлэх журмын баримт.</div><div><br></div><div>Likelihood: 4 — Магадлал өндөр.</div><div>Phishing таних сургалт хангалтгүй, нэвтрэлт зөвхөн нууц үгээр хамгаалагдсан гэж үзсэн тул хуурамч холбоосоор бүртгэлээ алдах магадлал өндөр.</div><div><br></div><div>Impact: 4 — Ноцтой.</div><div>Алдагдсан бүртгэлээр өвчтөний мэдээлэлд хандах, бүртгэлийн мэдээлэл өөрчлөх боломж үүснэ.</div><div><br></div><div>Risk Score: 4 × 4 = 16</div><div>Risk Level: High</div>",
+      "stage": "Assessed",
+      "owner": [
+        "Risk Analyst - Enkhmend"
+      ],
+      "deadline": "2026-12-16 00:00:00"
+    },
+    {
+      "id": 7,
+      "name": "EM-R06 — Backup-аас мэдээлэл сэргээж чадахгүй болох",
+      "description": "Asset:EM-AST-06 — Backup төхөөрөмж/санRisk Owner:IT ажилтанThreat:Үндсэн мэдээлэл устсан үед нөөц хуулбар ашиглах боломжгүй болох.Vulnerability:Backup амжилттай эсэхийг шалгадаггүй, сэргээх туршилт хийдэггүй, нөөц хуулбар үндсэн системтэй хамт өртөх боломжтой.Likelihood: 3Impact: 5Risk Score: 3 × 5 = 15Risk Level: HighPotential Consequences:Өвчтөний болон лабораторийн мэдээлэл алдагдах, үйлчилгээ удаан хугацаагаар саатах.Treatment Plan:1. Нөөцлөх мэдээлэл, давтамж, хадгалах хугацааг тодорхойлох.2. Backup-ийн амжилт, алдааг тогтмол шалгах.3. Тусгаарлагдсан эсвэл offline нөөц хуулбар хадгалах.4. Нөөц хуулбарт хандах эрхийг хязгаарлах.5. Тусдаа туршилтын орчинд сэргээж, үр дүнг баримтжуулах.Related ISO Controls:A.8.13 — Information backupA.5.30 — ICT readiness for business continuityA.8.3 — Information access restrictionCompletion Evidence:Backup бүртгэл, сэргээх туршилтын тайлан, сэргээсэн мэдээллийн шалгалт.Likelihood: 3 — Тохиолдож болзошгүй.Backup-ийн ажиллагааг тогтмол шалгадаггүй, сэргээх туршилт хийгээгүй гэж үзсэн тул шаардлагатай үед нөөц хуулбар ашиглах боломжгүй байх эрсдэлтэй.Impact: 5 — Маш ноцтой.Үндсэн мэдээлэл устсан үед сэргээж чадахгүй бол өвчтөний болон лабораторийн мэдээлэл бүрмөсөн алдагдаж, үйлчилгээ удаан хугацаагаар саатаж болзошгүй.Risk Score: 3 × 5 = 15Risk Level: High",
+      "html": "<div data-oe-version=\"2.0\" data-last-history-steps=\"2592278630264635\">Asset:</div><div>EM-AST-06 — Backup төхөөрөмж/сан</div><div><br></div><div>Risk Owner:</div><div>IT ажилтан</div><div><br></div><div>Threat:</div><div>Үндсэн мэдээлэл устсан үед нөөц хуулбар ашиглах боломжгүй болох.</div><div><br></div><div>Vulnerability:</div><div>Backup амжилттай эсэхийг шалгадаггүй, сэргээх туршилт хийдэггүй, нөөц хуулбар үндсэн системтэй хамт өртөх боломжтой.</div><div><br></div><div>Likelihood: 3</div><div>Impact: 5</div><div>Risk Score: 3 × 5 = 15</div><div>Risk Level: High</div><div><br></div><div>Potential Consequences:</div><div>Өвчтөний болон лабораторийн мэдээлэл алдагдах, үйлчилгээ удаан хугацаагаар саатах.</div><div><br></div><div>Treatment Plan:</div><div>1. Нөөцлөх мэдээлэл, давтамж, хадгалах хугацааг тодорхойлох.</div><div>2. Backup-ийн амжилт, алдааг тогтмол шалгах.</div><div>3. Тусгаарлагдсан эсвэл offline нөөц хуулбар хадгалах.</div><div>4. Нөөц хуулбарт хандах эрхийг хязгаарлах.</div><div>5. Тусдаа туршилтын орчинд сэргээж, үр дүнг баримтжуулах.</div><div><br></div><div>Related ISO Controls:</div><div>A.8.13 — Information backup</div><div>A.5.30 — ICT readiness for business continuity</div><div>A.8.3 — Information access restriction</div><div><br></div><div>Completion Evidence:</div><div>Backup бүртгэл, сэргээх туршилтын тайлан, сэргээсэн мэдээллийн шалгалт.</div><div><br></div><div>Likelihood: 3 — Тохиолдож болзошгүй.</div><div>Backup-ийн ажиллагааг тогтмол шалгадаггүй, сэргээх туршилт хийгээгүй гэж үзсэн тул шаардлагатай үед нөөц хуулбар ашиглах боломжгүй байх эрсдэлтэй.</div><div><br></div><div>Impact: 5 — Маш ноцтой.</div><div>Үндсэн мэдээлэл устсан үед сэргээж чадахгүй бол өвчтөний болон лабораторийн мэдээлэл бүрмөсөн алдагдаж, үйлчилгээ удаан хугацаагаар саатаж болзошгүй.</div><div><br></div><div>Risk Score: 3 × 5 = 15</div><div>Risk Level: High</div>",
+      "stage": "Assessed",
+      "owner": [
+        "Risk Analyst - Enkhmend"
+      ],
+      "deadline": "2026-12-16 00:00:00"
+    },
+    {
+      "id": 8,
+      "name": "EM-R07 — Firewall буруу тохируулах",
+      "description": "Asset:EM-AST-07 — Firewall, routerRisk Owner:Сүлжээний ажилтанThreat:Буруу тохиргооноос зөвшөөрөлгүй холболт нээгдэх эсвэл шаардлагатай үйлчилгээ хаагдах.Vulnerability:Өөрчлөлтийг хянах журамгүй, тохиргооны нөөц хуулбар болон буцаах төлөвлөгөө байхгүй.Likelihood: 3Impact: 4Risk Score: 3 × 4 = 12Risk Level: MediumPotential Consequences:Эмнэлгийн сүлжээнд зөвшөөрөлгүй хандалт үүсэх, системүүдийн холболт тасалдах.Treatment Plan:1. Зөвхөн шаардлагатай холболтыг зөвшөөрөх.2. Өөрчлөлт бүрийг урьдчилан хянуулж батлуулах.3. Өөрчлөхийн өмнө тохиргоог нөөцлөх.4. Буцаах төлөвлөгөө бэлдэх.5. Өөрчлөлтийн дараа холболт болон хамгаалалтыг шалгах.Related ISO Controls:A.8.9 — Configuration managementA.8.20 — Networks securityA.8.32 — Change managementCompletion Evidence:Батлагдсан өөрчлөлтийн хүсэлт, тохиргооны backup, шалгалтын үр дүн.Likelihood: 3 — Тохиолдож болзошгүй.Өөрчлөлтийн давхар хяналт, тохиргооны шалгалт хангалтгүй гэж үзсэн тул буруу дүрэм оруулах боломжтой.Impact: 4 — Ноцтой.Буруу тохиргоо нь зөвшөөрөлгүй холболт нээх эсвэл эмнэлгийн шаардлагатай системүүдийн холболтыг тасалдуулж болзошгүй.Risk Score: 3 × 4 = 12Risk Level: Medium",
+      "html": "<div data-oe-version=\"2.0\" data-last-history-steps=\"4472954196622036\">Asset:</div><div>EM-AST-07 — Firewall, router</div><div><br></div><div>Risk Owner:</div><div>Сүлжээний ажилтан</div><div><br></div><div>Threat:</div><div>Буруу тохиргооноос зөвшөөрөлгүй холболт нээгдэх эсвэл шаардлагатай үйлчилгээ хаагдах.</div><div><br></div><div>Vulnerability:</div><div>Өөрчлөлтийг хянах журамгүй, тохиргооны нөөц хуулбар болон буцаах төлөвлөгөө байхгүй.</div><div><br></div><div>Likelihood: 3</div><div>Impact: 4</div><div>Risk Score: 3 × 4 = 12</div><div>Risk Level: Medium</div><div><br></div><div>Potential Consequences:</div><div>Эмнэлгийн сүлжээнд зөвшөөрөлгүй хандалт үүсэх, системүүдийн холболт тасалдах.</div><div><br></div><div>Treatment Plan:</div><div>1. Зөвхөн шаардлагатай холболтыг зөвшөөрөх.</div><div>2. Өөрчлөлт бүрийг урьдчилан хянуулж батлуулах.</div><div>3. Өөрчлөхийн өмнө тохиргоог нөөцлөх.</div><div>4. Буцаах төлөвлөгөө бэлдэх.</div><div>5. Өөрчлөлтийн дараа холболт болон хамгаалалтыг шалгах.</div><div><br></div><div>Related ISO Controls:</div><div>A.8.9 — Configuration management</div><div>A.8.20 — Networks security</div><div>A.8.32 — Change management</div><div><br></div><div>Completion Evidence:</div><div>Батлагдсан өөрчлөлтийн хүсэлт, тохиргооны backup, шалгалтын үр дүн.</div><div><br></div><div>Likelihood: 3 — Тохиолдож болзошгүй.</div><div>Өөрчлөлтийн давхар хяналт, тохиргооны шалгалт хангалтгүй гэж үзсэн тул буруу дүрэм оруулах боломжтой.</div><div><br></div><div>Impact: 4 — Ноцтой.</div><div>Буруу тохиргоо нь зөвшөөрөлгүй холболт нээх эсвэл эмнэлгийн шаардлагатай системүүдийн холболтыг тасалдуулж болзошгүй.</div><div><br></div><div>Risk Score: 3 × 4 = 12</div><div>Risk Level: Medium</div>",
+      "stage": "Assessed",
+      "owner": [
+        "Risk Analyst - Enkhmend"
+      ],
+      "deadline": "2026-12-16 00:00:00"
+    },
+    {
+      "id": 9,
+      "name": "EM-R08 — Ажлаас гарсан ажилтны эрх идэвхтэй үлдэх",
+      "description": "Asset:EM-AST-08 — Ажилтны мэдээллийн санХолбоотой хөрөнгө: Ажилтны ханддаг эмнэлгийн системүүдRisk Owner:Хүний нөөцЭрх цуцлах ажиллагаа хариуцах: IT ажилтанThreat:Ажлаас гарсан ажилтан хуучин хэрэглэгчийн бүртгэлээр системд нэвтрэх.Vulnerability:Хүний нөөцөөс IT-д мэдээлэх дараалал тодорхойгүй, эрх цуцлах checklist байхгүй.Likelihood: 3Impact: 4Risk Score: 3 × 4 = 12Risk Level: MediumPotential Consequences:Ажилтны болон өвчтөний мэдээлэлд зөвшөөрөлгүй хандах, мэдээлэл өөрчлөх.Treatment Plan:1. Ажилд орох, үүрэг солих, ажлаас гарах эрхийн журам гаргах.2. Хүний нөөцөөс IT-д мэдээлэх хугацаа, хариуцагчийг тогтоох.3. Хэрэглэгчийн бүртгэл, session болон холбогдох эрхийг цуцлах.4. Эзэмшсэн төхөөрөмж, мэдээлэл, ажлыг шилжүүлэх.5. Идэвхтэй хэрэглэгчдийг ажилтны жагсаалттай тогтмол тулгах.Related ISO Controls:A.5.16 — Identity managementA.5.18 — Access rightsA.6.5 — Responsibilities after termination or change of employmentCompletion Evidence:Ажлаас гарах checklist, идэвхгүй болгосон туршилтын хэрэглэгч, эрхийн review бүртгэл.Likelihood: 3 — Тохиолдож болзошгүй.Хүний нөөцөөс IT-д мэдээлэх дараалал болон эрх цуцлах checklist байхгүй гэж үзсэн тул хуучин бүртгэл идэвхтэй үлдэх боломжтой.Impact: 4 — Ноцтой.Хуучин ажилтан өмнөх эрхээрээ ажилтны болон өвчтөний мэдээлэлд хандах, хуулж авах, өөрчлөх боломжтой.Risk Score: 3 × 4 = 12Risk Level: Medium",
+      "html": "<div data-oe-version=\"2.0\" data-last-history-steps=\"841332433204584\">Asset:</div><div>EM-AST-08 — Ажилтны мэдээллийн сан</div><div>Холбоотой хөрөнгө: Ажилтны ханддаг эмнэлгийн системүүд</div><div><br></div><div>Risk Owner:</div><div>Хүний нөөц</div><div>Эрх цуцлах ажиллагаа хариуцах: IT ажилтан</div><div><br></div><div>Threat:</div><div>Ажлаас гарсан ажилтан хуучин хэрэглэгчийн бүртгэлээр системд нэвтрэх.</div><div><br></div><div>Vulnerability:</div><div>Хүний нөөцөөс IT-д мэдээлэх дараалал тодорхойгүй, эрх цуцлах checklist байхгүй.</div><div><br></div><div>Likelihood: 3</div><div>Impact: 4</div><div>Risk Score: 3 × 4 = 12</div><div>Risk Level: Medium</div><div><br></div><div>Potential Consequences:</div><div>Ажилтны болон өвчтөний мэдээлэлд зөвшөөрөлгүй хандах, мэдээлэл өөрчлөх.</div><div><br></div><div>Treatment Plan:</div><div>1. Ажилд орох, үүрэг солих, ажлаас гарах эрхийн журам гаргах.</div><div>2. Хүний нөөцөөс IT-д мэдээлэх хугацаа, хариуцагчийг тогтоох.</div><div>3. Хэрэглэгчийн бүртгэл, session болон холбогдох эрхийг цуцлах.</div><div>4. Эзэмшсэн төхөөрөмж, мэдээлэл, ажлыг шилжүүлэх.</div><div>5. Идэвхтэй хэрэглэгчдийг ажилтны жагсаалттай тогтмол тулгах.</div><div><br></div><div>Related ISO Controls:</div><div>A.5.16 — Identity management</div><div>A.5.18 — Access rights</div><div>A.6.5 — Responsibilities after termination or change of employment</div><div><br></div><div>Completion Evidence:</div><div>Ажлаас гарах checklist, идэвхгүй болгосон туршилтын хэрэглэгч, эрхийн review бүртгэл.</div><div><br></div><div>Likelihood: 3 — Тохиолдож болзошгүй.</div><div>Хүний нөөцөөс IT-д мэдээлэх дараалал болон эрх цуцлах checklist байхгүй гэж үзсэн тул хуучин бүртгэл идэвхтэй үлдэх боломжтой.</div><div><br></div><div>Impact: 4 — Ноцтой.</div><div>Хуучин ажилтан өмнөх эрхээрээ ажилтны болон өвчтөний мэдээлэлд хандах, хуулж авах, өөрчлөх боломжтой.</div><div><br></div><div>Risk Score: 3 × 4 = 12</div><div>Risk Level: Medium</div>",
+      "stage": "Assessed",
+      "owner": [
+        "Risk Analyst - Enkhmend"
+      ],
+      "deadline": "2026-12-16 00:00:00"
+    },
+    {
+      "id": 10,
+      "name": "EM-R09 — Санхүүгийн мэдээлэл алдагдах",
+      "description": "Asset:EM-AST-09 — Төлбөр тооцооны бүртгэлRisk Owner:НягтланThreat:Төлбөр, нэхэмжлэл болон санхүүгийн тайланг зөвшөөрөлгүй хуулж авах, бусдад дамжуулах.Vulnerability:Санхүүгийн мэдээллийг нийтэд нээлттэй shared folder-д хадгалдаг, export болон хуваалцах эрхийг хянадаггүй.Likelihood: 3Impact: 4Risk Score: 3 × 4 = 12Risk Level: MediumPotential Consequences:Санхүүгийн мэдээллийн нууцлал алдагдах, төлбөртэй холбоотой маргаан үүсэх.Treatment Plan:1. Санхүүгийн мэдээллийг Confidential гэж ангилах.2. Зөвхөн шаардлагатай ажилтанд хандах эрх олгох.3. Файл болон тайлан дамжуулах зөвшөөрөгдсөн суваг тогтоох.4. Export болон мэдээлэл хуваалцах эрхийг шалгах.5. Хуваалцсан хавтас, файлын эрхийг тогтмол хянах.Related ISO Controls:A.5.12 — Classification of informationA.5.14 — Information transferA.8.3 — Information access restrictionCompletion Evidence:Файл хуваалцах эрхийн шалгалт, зөвшөөрөгдсөн дамжуулах журам, эрхийн review.Likelihood: 3 — Тохиолдож болзошгүй.Хуваалцсан хавтас болон тайлан экспортлох эрхийг тогтмол хянадаггүй гэж үзсэн тул мэдээлэл зөвшөөрөлгүй дамжих боломжтой.Impact: 4 — Ноцтой.Төлбөр, нэхэмжлэл, санхүүгийн мэдээлэл задрах нь мэдээллийн нууцлал алдагдах, төлбөртэй холбоотой маргаан үүсэхэд хүргэж болзошгүй.Risk Score: 3 × 4 = 12Risk Level: Medium",
+      "html": "<div data-oe-version=\"2.0\" data-last-history-steps=\"3202844403296504\">Asset:</div><div>EM-AST-09 — Төлбөр тооцооны бүртгэл</div><div><br></div><div>Risk Owner:</div><div>Нягтлан</div><div><br></div><div>Threat:</div><div>Төлбөр, нэхэмжлэл болон санхүүгийн тайланг зөвшөөрөлгүй хуулж авах, бусдад дамжуулах.</div><div><br></div><div>Vulnerability:</div><div>Санхүүгийн мэдээллийг нийтэд нээлттэй shared folder-д хадгалдаг, export болон хуваалцах эрхийг хянадаггүй.</div><div><br></div><div>Likelihood: 3</div><div>Impact: 4</div><div>Risk Score: 3 × 4 = 12</div><div>Risk Level: Medium</div><div><br></div><div>Potential Consequences:</div><div>Санхүүгийн мэдээллийн нууцлал алдагдах, төлбөртэй холбоотой маргаан үүсэх.</div><div><br></div><div>Treatment Plan:</div><div>1. Санхүүгийн мэдээллийг Confidential гэж ангилах.</div><div>2. Зөвхөн шаардлагатай ажилтанд хандах эрх олгох.</div><div>3. Файл болон тайлан дамжуулах зөвшөөрөгдсөн суваг тогтоох.</div><div>4. Export болон мэдээлэл хуваалцах эрхийг шалгах.</div><div>5. Хуваалцсан хавтас, файлын эрхийг тогтмол хянах.</div><div><br></div><div>Related ISO Controls:</div><div>A.5.12 — Classification of information</div><div>A.5.14 — Information transfer</div><div>A.8.3 — Information access restriction</div><div><br></div><div>Completion Evidence:</div><div>Файл хуваалцах эрхийн шалгалт, зөвшөөрөгдсөн дамжуулах журам, эрхийн review.</div><div><br></div><div>Likelihood: 3 — Тохиолдож болзошгүй.</div><div>Хуваалцсан хавтас болон тайлан экспортлох эрхийг тогтмол хянадаггүй гэж үзсэн тул мэдээлэл зөвшөөрөлгүй дамжих боломжтой.</div><div><br></div><div>Impact: 4 — Ноцтой.</div><div>Төлбөр, нэхэмжлэл, санхүүгийн мэдээлэл задрах нь мэдээллийн нууцлал алдагдах, төлбөртэй холбоотой маргаан үүсэхэд хүргэж болзошгүй.</div><div><br></div><div>Risk Score: 3 × 4 = 12</div><div>Risk Level: Medium</div>",
+      "stage": "Assessed",
+      "owner": [
+        "Risk Analyst - Enkhmend"
+      ],
+      "deadline": "2026-12-16 00:00:00"
+    },
+    {
+      "id": 11,
+      "name": "EM-R10 — Audit log устах, өөрчлөгдөх",
+      "description": "Asset:EM-AST-10 — Системийн audit logsRisk Owner:Аюулгүй байдлын хариуцагчThreat:Хэрэглэгчийн үйлдлийн мөрийг нуух зорилгоор лог устгах, өөрчлөх эсвэл лог бүртгэгдэхгүй болох.Vulnerability:Логийг өөрчлөх эрх хэт өргөн, зөвхөн үндсэн систем дээр хадгалдаг, тогтмол хянадаггүй.Likelihood: 3 — Тохиолдож болзошгүй.Лог удирдах эрх өргөн, тусдаа хамгаалалттай хуулбар болон тогтмол хяналт байхгүй гэж үзсэн тул лог устах, өөрчлөгдөх боломжтой.Impact: 4 — Ноцтой.Лог алдагдвал зөрчлийн шалтгаан, үйлдэл хийсэн хэрэглэгч болон өөрчлөлтийн дарааллыг тогтооход хүндрэл үүснэ.Risk Score: 3 × 4 = 12Risk Level: MediumPotential Consequences:Зөрчлийн шалтгаан болон хариуцагчийг тогтоох боломжгүй болох, нотолгоо алдагдах.Treatment Plan:1. Шаардлагатай систем, үйлдлүүдэд audit log идэвхжүүлэх.2. Лог унших болон удирдах эрхийг ялгах.3. Логийг тусдаа хамгаалалттай санд хуулж хадгалах.4. Лог бүртгэгдэж байгаа эсэхийг тогтмол шалгах.5. Сэжигтэй үйлдлийг хянаж, incident болгон бүртгэх.Related ISO Controls:A.8.15 — LoggingA.8.16 — Monitoring activitiesA.5.28 — Collection of evidenceCompletion Evidence:Идэвхтэй audit rules, бодит өөрчлөлтийн лог, логийн эрх болон хадгалалтын шалгалт.Assessment Basis:Энэхүү үнэлгээ нь сургалтын кейсийн таамаглалд үндэслэсэн. Treatment Plan нь хийхээр төлөвлөсөн арга хэмжээ, Completion Evidence нь дууссаныг нотлоход шаардагдах баримт юм.\t​",
+      "html": "<div data-oe-version=\"2.0\" data-last-history-steps=\"62369496174894\">Asset:</div><div>EM-AST-10 — Системийн audit logs</div><div><br></div><div>Risk Owner:</div><div>Аюулгүй байдлын хариуцагч</div><div><br></div><div>Threat:</div><div>Хэрэглэгчийн үйлдлийн мөрийг нуух зорилгоор лог устгах, өөрчлөх эсвэл лог бүртгэгдэхгүй болох.</div><div><br></div><div>Vulnerability:</div><div>Логийг өөрчлөх эрх хэт өргөн, зөвхөн үндсэн систем дээр хадгалдаг, тогтмол хянадаггүй.</div><div><br></div><div>Likelihood: 3 — Тохиолдож болзошгүй.</div><div>Лог удирдах эрх өргөн, тусдаа хамгаалалттай хуулбар болон тогтмол хяналт байхгүй гэж үзсэн тул лог устах, өөрчлөгдөх боломжтой.</div><div><br></div><div>Impact: 4 — Ноцтой.</div><div>Лог алдагдвал зөрчлийн шалтгаан, үйлдэл хийсэн хэрэглэгч болон өөрчлөлтийн дарааллыг тогтооход хүндрэл үүснэ.</div><div><br></div><div>Risk Score: 3 × 4 = 12</div><div>Risk Level: Medium</div><div><br></div><div>Potential Consequences:</div><div>Зөрчлийн шалтгаан болон хариуцагчийг тогтоох боломжгүй болох, нотолгоо алдагдах.</div><div><br></div><div>Treatment Plan:</div><div>1. Шаардлагатай систем, үйлдлүүдэд audit log идэвхжүүлэх.</div><div>2. Лог унших болон удирдах эрхийг ялгах.</div><div>3. Логийг тусдаа хамгаалалттай санд хуулж хадгалах.</div><div>4. Лог бүртгэгдэж байгаа эсэхийг тогтмол шалгах.</div><div>5. Сэжигтэй үйлдлийг хянаж, incident болгон бүртгэх.</div><div><br></div><div>Related ISO Controls:</div><div>A.8.15 — Logging</div><div>A.8.16 — Monitoring activities</div><div>A.5.28 — Collection of evidence</div><div><br></div><div>Completion Evidence:</div><div>Идэвхтэй audit rules, бодит өөрчлөлтийн лог, логийн эрх болон хадгалалтын шалгалт.</div><div><br></div><div>Assessment Basis:</div><div>Энэхүү үнэлгээ нь сургалтын кейсийн таамаглалд үндэслэсэн. Treatment Plan нь хийхээр төлөвлөсөн арга хэмжээ, Completion Evidence нь дууссаныг нотлоход шаардагдах баримт юм.<span class=\"oe-tabs\" style=\"width: 33.7px;\">\t</span>​</div>",
+      "stage": "Assessed",
+      "owner": [
+        "Risk Analyst - Enkhmend"
+      ],
+      "deadline": "2026-12-16 00:00:00"
+    }
+  ],
+  "controls": [
+    {
+      "code": "A.5.1",
+      "name": "Мэдээллийн аюулгүй байдлын бодлого",
+      "implementation": "Information Security Policy, Access Control Policy, Risk Treatment Plan гэсэн гурван ноорог Odoo-д бүртгэгдсэн.",
+      "status": "Partial",
+      "gap": "Удирдлагын баталгаа, ажилтнуудад танилцуулсан нотолгоо дутуу.",
+      "owner": "Manager",
+      "refs": "POL-01 POL-02 POL-03"
+    },
+    {
+      "code": "A.5.2",
+      "name": "Үүрэг ба хариуцлага",
+      "implementation": "Таван operational role, тусдаа техникийн Administrator, хөрөнгө ба risk owner тодорхой.",
+      "status": "Partial",
+      "gap": "Бодит ажилтны томилгоо, үүргийн баталгаа шаардлагатай.",
+      "owner": "Manager",
+      "refs": "RBAC matrix"
+    },
+    {
+      "code": "A.5.3",
+      "name": "Үүрэг тусгаарлах",
+      "implementation": "Asset Officer, Risk Analyst, Incident Responder-ийн write эрх тусдаа. Viewer write хоригийг шалгасан.",
+      "status": "Partial",
+      "gap": "Бодит байгууллагын хоёр шатны батлах ажиллагааг хэрэгжүүлээгүй.",
+      "owner": "Manager",
+      "refs": "38 permission checks"
+    },
+    {
+      "code": "A.5.9",
+      "name": "Мэдээлэл болон холбогдох хөрөнгийн бүртгэл",
+      "implementation": "Inventory product дээр EM-AST-01–10, эзэмшигч, ангилал, байршил бүртгэсэн.",
+      "status": "Implemented",
+      "gap": "Сургалтын хүрээнд 10 бүртгэлийг шалгасан. Бодит физик тооллого хийгээгүй.",
+      "owner": "Asset Officer",
+      "refs": "Asset Register"
+    },
+    {
+      "code": "A.5.12",
+      "name": "Мэдээллийн ангилал",
+      "implementation": "Restricted, Confidential ангиллыг хөрөнгийн internal notes-д тэмдэглэсэн.",
+      "status": "Partial",
+      "gap": "Ангилал нь шошго. Record-level хамгаалалтыг өөрөө үүсгэхгүй.",
+      "owner": "Asset Officer",
+      "refs": "Asset internal notes"
+    },
+    {
+      "code": "A.5.14",
+      "name": "Мэдээлэл дамжуулах",
+      "implementation": "Бодлогод зөвшөөрөгдсөн суваг, хуваалцах баталгаа, нууц мэдээлэл Git-д оруулахгүй байх шаардлага бий.",
+      "status": "Planned",
+      "gap": "Шифрлэсэн дамжуулалт, бодит email/DLP хяналтын нотолгоо байхгүй.",
+      "owner": "Manager",
+      "refs": "POL-01"
+    },
+    {
+      "code": "A.5.15",
+      "name": "Хандалтын удирдлага",
+      "implementation": "Бүлэг, ACL, global conditional write guard-аар таван үүргийн эрхийг ялгасан.",
+      "status": "Implemented",
+      "gap": "enkhmend_isms-ийн сонгосон model дээр баталгаажуулсан. Бодит HIS систем хамрагдаагүй.",
+      "owner": "Manager",
+      "refs": "RBAC verification"
+    },
+    {
+      "code": "A.5.16",
+      "name": "Identity удирдлага",
+      "implementation": "Таван тусдаа сургалтын account, нууц үг тус бүр санамсаргүй, shared operational account ашиглахгүй.",
+      "status": "Implemented",
+      "gap": "Сургалтын identity-ийн нэвтрэлтийг вебээр шалгасан.",
+      "owner": "Manager",
+      "refs": "Five HTTP logins"
+    },
+    {
+      "code": "A.5.18",
+      "name": "Хандалтын эрхийн review",
+      "implementation": "Анхны role matrix, эерэг/сөрөг шалгалт болон ажил солих/гарах журамтай.",
+      "status": "Partial",
+      "gap": "Улирлын эрхийн review болон бодит эрх цуцлалтын цикл хийгдээгүй.",
+      "owner": "Manager",
+      "refs": "POL-02"
+    },
+    {
+      "code": "A.5.24",
+      "name": "Incident management төлөвлөлт",
+      "implementation": "Helpdesk баг, Incident Report Investigate Resolve Close гэсэн 5 stage, сургалтын ticket бий.",
+      "status": "Partial",
+      "gap": "Бодит холбоо барих нэрс, баталсан SLA болон албан ёсны escalation дутуу.",
+      "owner": "Incident Responder",
+      "refs": "HT00001"
+    },
+    {
+      "code": "A.5.25",
+      "name": "Security event үнэлгээ",
+      "implementation": "HT00001 дээр High priority, affected asset, related risk болон triage шалгуур баримтжуулсан.",
+      "status": "Partial",
+      "gap": "Бодит event monitoring-оос автоматаар event хүлээн авахгүй.",
+      "owner": "Incident Responder",
+      "refs": "Incident procedure"
+    },
+    {
+      "code": "A.5.26",
+      "name": "Incident-д хариу өгөх",
+      "implementation": "Сургалтын ticket-ийг 5 шатаар шилжүүлж, симуляцийн тэмдэглэл хадгална.",
+      "status": "Partial",
+      "gap": "Бодит өвчтөний мэдээлэл, сүлжээ эсвэл account дээр containment хийгээгүй.",
+      "owner": "Incident Responder",
+      "refs": "Workflow test"
+    },
+    {
+      "code": "A.5.27",
+      "name": "Incident-ээс суралцах",
+      "implementation": "Сургалтын тайланд root cause таамаглал, lessons learned, follow-up task-ийг бичсэн.",
+      "status": "Partial",
+      "gap": "Бодит incident-ийн дараах байгууллагын review хийгээгүй.",
+      "owner": "Incident Responder",
+      "refs": "Exercise review"
+    },
+    {
+      "code": "A.5.28",
+      "name": "Нотолгоо цуглуулах",
+      "implementation": "Actor, цаг, model, record, өмнөх/дараах утгатай audit log, өөрчлөлтгүй UI screenshot цуглуулсан.",
+      "status": "Partial",
+      "gap": "Forensic acquisition болон chain of custody-ийн бодит дасгал хийгээгүй.",
+      "owner": "Manager",
+      "refs": "Audit logs and screenshots"
+    },
+    {
+      "code": "A.5.30",
+      "name": "Үйл ажиллагааны тасралтгүй байдлын ICT бэлэн байдал",
+      "implementation": "Сэргээх ажлын дараалал, сургалтын санал болгосон RTO 4 цаг RPO 24 цаг баримтжуулсан. 2026-11-16-нд локал database dump болон filestore backup-аас тусдаа test database-д сэргээсэн. 8 хүснэгтийн мөрийн тоо, 89 attachment-ийн hash таарсан. Restore pipeline 12.19 секунд үргэлжилсэн.",
+      "status": "Planned",
+      "gap": "backup-restore-verification.json. Offsite backup, retention, бизнесийн баталсан RTO/RPO, full failover болон restored web login шалгалт үлдсэн.",
+      "owner": "Manager",
+      "refs": "POL-03 EM-R03 EM-R06"
+    },
+    {
+      "code": "A.6.3",
+      "name": "Аюулгүй байдлын мэдлэг сургалт",
+      "implementation": "Phishing, malware, нууц мэдээлэл боловсруулах сэдвийг risk treatment-д оруулсан.",
+      "status": "Planned",
+      "gap": "Сургалт явуулсан ирц, үнэлгээний баримт байхгүй.",
+      "owner": "Manager",
+      "refs": "EM-R04 EM-R05"
+    },
+    {
+      "code": "A.6.5",
+      "name": "Ажил дуусах болон үүрэг өөрчлөгдөх үеийн хариуцлага",
+      "implementation": "Joiner mover leaver дараалал, эрх цуцлах checklist бодлогод бий.",
+      "status": "Partial",
+      "gap": "Бодит ажилтны гарах үйл явдлаар туршаагүй.",
+      "owner": "Manager",
+      "refs": "POL-02 EM-R08"
+    },
+    {
+      "code": "A.6.8",
+      "name": "Security event мэдээлэх",
+      "implementation": "Helpdesk дотор гараар ticket үүсгэх суваг ажиллана.",
+      "status": "Partial",
+      "gap": "Inbound email болон байгууллага даяарх мэдээлэх сувгийг тохируулаагүй.",
+      "owner": "Incident Responder",
+      "refs": "Helpdesk form"
+    },
+    {
+      "code": "A.8.3",
+      "name": "Мэдээлэлд хандах хязгаарлалт",
+      "implementation": "Viewer нь сонгосон model дээр write хийж чадахгүй, operational role бүр өөр write хүрээтэй.",
+      "status": "Partial",
+      "gap": "Хөрөнгийн ангиллаар мөр тусгаарлах, medical record системийн эрхийг хэрэгжүүлээгүй.",
+      "owner": "Manager",
+      "refs": "Negative permission checks"
+    },
+    {
+      "code": "A.8.5",
+      "name": "Аюулгүй нэвтрэлт",
+      "implementation": "Хувь хэрэглэгчийн нэвтрэлт, санамсаргүй урт нууц үг, техникийн админыг тусгаарласан.",
+      "status": "Partial",
+      "gap": "MFA, TLS, password lifecycle-ийн байгууллагын бодлого бүрэн хэрэгжээгүй.",
+      "owner": "Manager",
+      "refs": "HTTP login checks"
+    },
+    {
+      "code": "A.8.7",
+      "name": "Malware-ээс хамгаалах",
+      "implementation": "Endpoint protection болон зөвшөөрөгдсөн программын арга хэмжээг эрсдэлийн task-д төлөвлөсөн.",
+      "status": "Planned",
+      "gap": "Endpoint protection суулгасан болон scan хийсэн нотолгоо байхгүй.",
+      "owner": "Asset Officer",
+      "refs": "EM-R04"
+    },
+    {
+      "code": "A.8.8",
+      "name": "Техникийн эмзэг байдлын удирдлага",
+      "implementation": "Шинэчлэлт, patch review, шалгалтын хариуцагчийг treatment-д бичсэн.",
+      "status": "Partial",
+      "gap": "Тогтмол vulnerability scan, patch verification хийгээгүй.",
+      "owner": "Risk Analyst",
+      "refs": "EM-R04 EM-R07"
+    },
+    {
+      "code": "A.8.13",
+      "name": "Мэдээллийн backup",
+      "implementation": "Backup хөрөнгө, сэргээх эрсдэл, давтамж ба restore test-ийн төлөвлөгөөтэй. 2026-11-16-нд локал database dump болон filestore backup-аас тусдаа test database-д сэргээсэн. 8 хүснэгтийн мөрийн тоо, 89 attachment-ийн hash таарсан. Restore pipeline 12.19 секунд үргэлжилсэн.",
+      "status": "Partial",
+      "gap": "backup-restore-verification.json. Offsite backup, retention, бизнесийн баталсан RTO/RPO, full failover болон restored web login шалгалт үлдсэн.",
+      "owner": "Asset Officer",
+      "refs": "EM-AST-06 EM-R06"
+    },
+    {
+      "code": "A.8.15",
+      "name": "Лог бүртгэл",
+      "implementation": "OCA auditlog дээр product template/variant, task, incident-ийн create write delete export Full log идэвхтэй.",
+      "status": "Implemented",
+      "gap": "Гурван operational хэрэглэгчийн веб өөрчлөлтөөс old/new утгатай лог үүссэнийг баталсан.",
+      "owner": "Manager",
+      "refs": "audit-verification.json"
+    },
+    {
+      "code": "A.8.16",
+      "name": "Үйлдлийн хяналт",
+      "implementation": "Manager аудитын лог уншина, бусад operational role уншихгүй. Review checklist боловсруулсан.",
+      "status": "Partial",
+      "gap": "SIEM, автомат alert, гаднын өөрчлөх боломжгүй логийн сан байхгүй.",
+      "owner": "Manager",
+      "refs": "Audit menu and review checklist"
+    }
+  ],
+  "policies": {
+    "POL-01": {
+      "name": "Information Security Policy",
+      "title": "Мэдээллийн аюулгүй байдлын бодлого",
+      "sections": [
+        [
+          "Зорилго ба төлөв",
+          "Энхмэнд эмнэлгийн сургалтын кейст өвчтөний мэдээллийн нууцлал, шинжилгээний мэдээллийн бүрэн бүтэн байдал, мэдээллийн системийн хүртээмжийг хамгаалах шаардлагыг тогтооно. Хувилбар 1.0 нь удирдлагын баталгаа хүлээгдэж буй ноорог. Бодит эмнэлгийн баталсан бодлого эсвэл ISO certification гэж үзэхгүй."
+        ],
+        [
+          "Хамрах хүрээ",
+          "Өвчтөний болон лабораторийн мэдээллийн сан, сервер, эмчийн болон бүртгэлийн компьютер, backup, firewall/router, HR, санхүү, audit log гэсэн 10 хөрөнгө хамрагдана. Odoo нь ISMS-ийн бүртгэл ба нотолгоог удирдана. Бодит HIS/LIS интеграц, эмчилгээний шийдвэр, бодит өвчтөний өгөгдөл хамрагдахгүй."
+        ],
+        [
+          "Хариуцлага",
+          "ISMS Manager бодлого ба эрхийн review-г зохион байгуулна. Asset Officer хөрөнгийн бүртгэл, Risk Analyst эрсдэл ба treatment, Incident Responder incident урсгалыг хариуцна. Viewer нь унших эрхтэй. Техникийн Administrator системийн тохиргоог тусад нь удирдана."
+        ],
+        [
+          "Ангилал ба ашиглалт",
+          "Хөрөнгө бүр эзэмшигч, байршил, ангилалтай байна. Restricted мэдээллийг зөвхөн ажлын хэрэгцээтэй ажилтанд олгоно. Confidential мэдээллийг зөвшөөрөгдсөн ажилтанд ашиглуулна. Internal болон Public ангиллыг шаардлагатай үед хэрэглэнэ. Ангиллын шошго нь техникийн хандалтын хоригийг орлохгүй. Сургалтын системд бодит өвчтөний регистр, онош, утас оруулахгүй."
+        ],
+        [
+          "Мэдээлэл боловсруулах шаардлага",
+          "Хэрэглэгч өөрийн identity ашиглана. Нууц үг, token, бодит мэдээллийн dump-ийг Git, чат, screenshot-д оруулахгүй. Мэдээлэл дамжуулахдаа зөвшөөрөгдсөн суваг, хүлээн авагч, зорилгыг баталгаажуулна. Ажилтан зөвшөөрөлгүй software суулгахгүй, сэжигтэй холбоос нээсэн бол мэдээлнэ. Production-д encryption, endpoint protection, malware scan-ийг тусдаа хэрэгжүүлж нотолно."
+        ],
+        [
+          "Incident ба нотолгоо",
+          "Сэжигтэй хандалт, буруу өөрчлөлт, алдагдсан төхөөрөмж, системийн тасалдлыг Helpdesk-д бүртгэнэ. Incident Report Investigate Resolve Close гэсэн дарааллыг хэрэглэнэ. Ticket-д affected asset, мэдээлсэн цаг, хариуцагч, хийсэн ажиллагаа, нотолгооны байршлыг бичнэ. Нотолгоо устгах, зөвшөөрөлгүй халдлагын туршилт хийхгүй."
+        ],
+        [
+          "Хяналт ба шинэчлэл",
+          "Сар бүр хугацаа хэтэрсэн өндөр эрсдэл, audit review, хөрөнгийн өөрчлөлтийг хянана. Улирал бүр эрхийн review, жил бүр бодлогын review санал болгоно. Incident, шинэ систем, байгууллагын өөрчлөлтөөр хугацаанаас өмнө шинэчилнэ. Зөрчил, exception бүр шалтгаан, эзэн, хугацаа, удирдлагын шийдвэртэй байна."
+        ],
+        [
+          "Батлах ба үлдсэн ажил",
+          "Батлах эрх бүхий удирдлагын нэр, гарын үсэг, хүчин төгөлдөр огноо одоогоор ирээгүй. Хувилбарын түүх: 1.0 сургалтын ноорог. Бодит байгууллага хэрэглэхийн өмнө хариуцагч, сургалт, хэрэгжилтийн нотолгоог баталгаажуулна."
+        ]
+      ]
+    },
+    "POL-02": {
+      "name": "Access Control Policy",
+      "title": "Хандалтын удирдлагын бодлого",
+      "sections": [
+        [
+          "Зорилго",
+          "Хэрэглэгчийн эрхийг албан үүрэг, ажлын хэрэгцээнд тохируулан олгож, зөвшөөрөлгүй харах болон өөрчлөх эрсдэлийг бууруулна. Энэ нь enkhmend_isms-ийн operational model-д хамаарах сургалтын ноорог."
+        ],
+        [
+          "Эрхийн матриц",
+          "Viewer хөрөнгө, эрсдэл, incident уншина. Asset Officer хөрөнгө үүсгэж засна. Risk Analyst эрсдэлийн task удирдана. Incident Responder өөрийн багийн ticket үүсгэж засна. ISMS Manager ISMS бүртгэлийг удирдаж, аудитын лог уншина. Таван хэрэглэгчийн хэнд ч Settings administration эсвэл superuser эрх олгоогүй."
+        ],
+        [
+          "Шинэ ажилтан",
+          "Хүсэлт гаргагч бизнесийн хэрэгцээ, шаардлагатай систем, үүрэг, хугацааг бичнэ. Эзэмшигч баталсны дараа техникийн админ нэрлэсэн account үүсгэнэ. Нэвтрэх мэдээллийг хамгаалалттай сувгаар хүргэнэ. Унших болон өөрчлөх эрхийн эерэг/сөрөг шалгалт хийж үр дүнг хадгална."
+        ],
+        [
+          "Үүрэг солих ба ажлаас гарах",
+          "Хуучин үүргийн хэрэгцээг шалгаж, шаардлагагүй бүлгийг хасна. Хүний нөөцөөс IT-д мэдэгдсэн хугацаанд account, session, API эрхийг цуцлах ажлыг зохион байгуулна. Эзэмшсэн төхөөрөмж, мэдээлэл, ticket, task-ийг шилжүүлнэ. Хийсэн ажиллагааг checklist-д тэмдэглэж эрх эзэмшигчээр хянуулна."
+        ],
+        [
+          "Нууц үг ба өндөр эрх",
+          "Shared operational account ашиглахгүй. Сургалтын таван account тус бүр санамсаргүй урт нууц үгтэй. .private/users.json болон нууцтай config файлыг Git-д оруулахгүй. Техникийн Administrator-ийг өдөр тутмын ажилд ашиглахгүй. Production-д MFA, TLS, credential rotation, emergency access-ийн хугацаа ба review-г нэмэлтээр хэрэгжүүлнэ."
+        ],
+        [
+          "Эрхийн техникийн зарчим",
+          "Odoo-ийн ACL нийлдэг тул нэмэлт бүлэг олгох бүрд нийлмэл эрхийг шалгана. Viewer-ийн write-ийг global conditional record rule хориглоно. Asset Officer-д broad Stock User бүлэг өгөөгүй. Product model-ийн эрх нь бүх product-д үйлчлэх боломжтой; хөрөнгийн classification-аар мөр тусгаарлах бүрэн загвар хэрэгжээгүй."
+        ],
+        [
+          "Review ба лог",
+          "Улирал бүр active user, role, owner, business need-ийг тулгаж review хийнэ. Аудитын логийг operational manager унших боловч засахгүй. Нэвтрэлт, бүх model-ийн read, гаднын SQL өөрчлөлтийг сонгосон audit дүрмүүд бүртгэхгүй. Гаднын хамгаалалттай логийн сан production-д шаардлагатай."
+        ],
+        [
+          "Exception ба баталгаа",
+          "Түр өндөр эрхийн хүсэлт хугацаа, зорилго, баталсан эзэнтэй байна. Ажил дуусмагц цуцалж review хийнэ. Удирдлагын бодит баталгаа, тогтмол эрхийн review-ийн цикл одоогоор хийгдээгүй."
+        ]
+      ]
+    },
+    "POL-03": {
+      "name": "Risk Treatment Plan",
+      "title": "Эрсдэлийг бууруулах төлөвлөгөө",
+      "sections": [
+        [
+          "Зорилго ба аргачлал",
+          "10 мэдээллийн хөрөнгөтэй холбоотой 10 эрсдэлийг үнэлнэ. Likelihood ба Impact тус бүр 1–5. Score нь үржвэр. 1–5 Low, 6–14 Medium, 15–25 High. Оноо нь сургалтын кейсийн таамаглал; эмнэлгийн бодит тохиолдлын статистикт үндэслээгүй."
+        ],
+        [
+          "Үнэлгээний тайлбар",
+          "Likelihood 1 маш ховор, 2 ховор, 3 тохиолдож болзошгүй, 4 магадлал өндөр, 5 давтагддаг эсвэл маш өндөр. Impact 1 маш бага, 2 бага, 3 дунд, 4 ноцтой, 5 маш ноцтой. Нууцлал, бүрэн бүтэн байдал, хүртээмжид үзүүлэх хамгийн ноцтой нөлөөг үндэслэлтэй сонгоно."
+        ],
+        [
+          "Хариу арга хэмжээ",
+          "Бууруулах, зайлсхийх, шилжүүлэх, хүлээн зөвшөөрөх сонголтоос эзэмшигч шийднэ. Өндөр эрсдэлийг удирдлагын бичгээр зөвшөөрөлгүй хүлээн зөвшөөрөхгүй. Risk Analyst нь task бүрийн хөрөнгө, threat, vulnerability, score, owner, due date, control, completion evidence-ийг шинэчилнэ."
+        ],
+        [
+          "Өндөр эрсдэлийн эхний ээлж",
+          "EM-R01 эрхийн хязгаарлалт, EM-R02 шинжилгээний хариуны давхар баталгаа, EM-R03 сервер сэргээх төлөвлөгөө, EM-R04 endpoint хамгаалалт ба patch, EM-R05 phishing сургалт ба MFA, EM-R06 backup restore exercise-ийг төлөвлөнө. Хугацаа ба эзэн нь Odoo task-д байна. Техникийн бодит хэрэгжилтгүй ажлыг Closed болгохгүй."
+        ],
+        [
+          "Дунд эрсдэлийн арга хэмжээ",
+          "EM-R07 firewall configuration review, EM-R08 leaver checklist, EM-R09 санхүүгийн мэдээллийн хуваалцах эрх, EM-R10 гаднын логийн хамгаалалт ба review. Audit Log-ийн орон нутгийн бүртгэл ажиллаж байгаа ч DB administrator-аас хамгаалсан immutable log гэж үзэхгүй."
+        ],
+        [
+          "Backup ба continuity",
+          "Сургалтын хэлэлцүүлгийн зорилтот RTO 4 цаг, RPO 24 цаг санал болгосон; эмнэлгийн удирдлага батлаагүй. Database болон filestore хоёрыг хамтад нь нөөцөлж, тусдаа туршилтын орчинд сэргээж, record count, attachment, login-ийг шалгах шаардлагатай. 2026-11-16-нд локал database dump болон filestore backup-аас тусдаа test database-д сэргээсэн. 8 хүснэгтийн мөрийн тоо, 89 attachment-ийн hash таарсан. Restore pipeline 12.19 секунд үргэлжилсэн. Production failover хийгээгүй."
+        ],
+        [
+          "Дуусгах ба residual risk",
+          "Эзэмшигч configuration, тест, approval нотолгоо хавсаргана. Analyst residual likelihood/impact-ийг дахин үнэлж, Manager үлдэх эрсдэлийг хүлээн зөвшөөрөх эсэхийг шийднэ. Residual score-ийг энэ үед таамгаар бууруулахгүй. Task-ийн үе шат нь Identified, Assessed, Treating, Reviewed, Closed байна."
+        ],
+        [
+          "Давтамж ба баталгаа",
+          "Өндөр эрсдэл ба хугацаа хэтэрсэн task-ийг долоо хоног бүр review хийхийг санал болгоно. Шинэ incident, vulnerability, төхөөрөмж, нийлүүлэгч гарвал үнэлгээг шинэчилнэ. Төлөвлөгөө нь сургалтын ноорог бөгөөд удирдлагын баталгаа, төсөв, бодит ажилтны томилгоо шаардлагатай."
+        ]
+      ]
+    }
+  },
+  "actions": {
+    "controls": 481,
+    "policies": 482
+  },
+  "counts": {
+    "assets": 10,
+    "risks": 10,
+    "controls": 25,
+    "policies": 3
+  }
+}

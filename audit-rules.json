@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Enkhmend - Assets",
+    "model": "product.template",
+    "state": "confirmed",
+    "create": true,
+    "write": true,
+    "delete": true,
+    "export": true,
+    "read": false,
+    "type": "full"
+  },
+  {
+    "id": 2,
+    "name": "Enkhmend - Asset variants",
+    "model": "product.product",
+    "state": "confirmed",
+    "create": true,
+    "write": true,
+    "delete": true,
+    "export": true,
+    "read": false,
+    "type": "full"
+  },
+  {
+    "id": 3,
+    "name": "Enkhmend - Risk tasks",
+    "model": "project.task",
+    "state": "confirmed",
+    "create": true,
+    "write": true,
+    "delete": true,
+    "export": true,
+    "read": false,
+    "type": "full"
+  },
+  {
+    "id": 4,
+    "name": "Enkhmend - Incidents",
+    "model": "helpdesk.ticket",
+    "state": "confirmed",
+    "create": true,
+    "write": true,
+    "delete": true,
+    "export": true,
+    "read": false,
+    "type": "full"
+  },
+  {
+    "id": 5,
+    "name": "Enkhmend - x_enkhmend_control",
+    "model": "x_enkhmend_control",
+    "state": "confirmed",
+    "create": true,
+    "write": true,
+    "delete": true,
+    "export": true,
+    "read": false,
+    "type": "full"
+  },
+  {
+    "id": 6,
+    "name": "Enkhmend - x_enkhmend_policy",
+    "model": "x_enkhmend_policy",
+    "state": "confirmed",
+    "create": true,
+    "write": true,
+    "delete": true,
+    "export": true,
+    "read": false,
+    "type": "full"
+  }
+]

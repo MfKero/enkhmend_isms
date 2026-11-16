@@ -1,0 +1,9 @@
+.private/
+*.log
+odoo.conf
+*.bak
+*.dump
+*.zip
+__pycache__/
+~$*
+.*.validated

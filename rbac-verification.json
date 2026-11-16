@@ -1,0 +1,185 @@
+{
+  "database": "enkhmend_isms",
+  "checked_at_utc": "2026-11-16T12:28:58.046666+00:00",
+  "checks": [
+    {
+      "check": "viewer is not Settings administrator",
+      "passed": true
+    },
+    {
+      "check": "viewer can read assets",
+      "passed": true
+    },
+    {
+      "check": "viewer can read risks",
+      "passed": true
+    },
+    {
+      "check": "viewer can read incident",
+      "passed": true
+    },
+    {
+      "check": "asset is not Settings administrator",
+      "passed": true
+    },
+    {
+      "check": "asset can read assets",
+      "passed": true
+    },
+    {
+      "check": "asset can read risks",
+      "passed": true
+    },
+    {
+      "check": "asset can read incident",
+      "passed": true
+    },
+    {
+      "check": "analyst is not Settings administrator",
+      "passed": true
+    },
+    {
+      "check": "analyst can read assets",
+      "passed": true
+    },
+    {
+      "check": "analyst can read risks",
+      "passed": true
+    },
+    {
+      "check": "analyst can read incident",
+      "passed": true
+    },
+    {
+      "check": "responder is not Settings administrator",
+      "passed": true
+    },
+    {
+      "check": "responder can read assets",
+      "passed": true
+    },
+    {
+      "check": "responder can read risks",
+      "passed": true
+    },
+    {
+      "check": "responder can read incident",
+      "passed": true
+    },
+    {
+      "check": "manager is not Settings administrator",
+      "passed": true
+    },
+    {
+      "check": "manager can read assets",
+      "passed": true
+    },
+    {
+      "check": "manager can read risks",
+      "passed": true
+    },
+    {
+      "check": "manager can read incident",
+      "passed": true
+    },
+    {
+      "check": "viewer cannot edit assets",
+      "passed": true
+    },
+    {
+      "check": "analyst cannot edit assets",
+      "passed": true
+    },
+    {
+      "check": "responder cannot edit assets",
+      "passed": true
+    },
+    {
+      "check": "viewer cannot edit risks",
+      "passed": true
+    },
+    {
+      "check": "asset cannot edit risks",
+      "passed": true
+    },
+    {
+      "check": "responder cannot edit risks",
+      "passed": true
+    },
+    {
+      "check": "viewer cannot edit incident",
+      "passed": true
+    },
+    {
+      "check": "asset cannot edit incident",
+      "passed": true
+    },
+    {
+      "check": "analyst cannot edit incident",
+      "passed": true
+    },
+    {
+      "check": "asset authorized write succeeds",
+      "passed": true
+    },
+    {
+      "check": "analyst authorized write succeeds",
+      "passed": true
+    },
+    {
+      "check": "responder authorized write succeeds",
+      "passed": true
+    },
+    {
+      "check": "viewer cannot read audit logs",
+      "passed": true
+    },
+    {
+      "check": "asset cannot read audit logs",
+      "passed": true
+    },
+    {
+      "check": "analyst cannot read audit logs",
+      "passed": true
+    },
+    {
+      "check": "responder cannot read audit logs",
+      "passed": true
+    },
+    {
+      "check": "manager can read audit logs",
+      "passed": true
+    },
+    {
+      "check": "manager cannot edit audit logs",
+      "passed": true
+    }
+  ],
+  "users": [
+    {
+      "role": "viewer",
+      "login": "viewer@enkhmend.test",
+      "id": 16
+    },
+    {
+      "role": "asset",
+      "login": "asset@enkhmend.test",
+      "id": 17
+    },
+    {
+      "role": "analyst",
+      "login": "analyst@enkhmend.test",
+      "id": 18
+    },
+    {
+      "role": "responder",
+      "login": "responder@enkhmend.test",
+      "id": 19
+    },
+    {
+      "role": "manager",
+      "login": "manager@enkhmend.test",
+      "id": 20
+    }
+  ]
+}

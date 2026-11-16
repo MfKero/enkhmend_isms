@@ -1,0 +1,49 @@
+{
+  "database": "enkhmend_isms",
+  "started_at_utc": "2026-11-16T14:03:12.770042+00:00",
+  "checks": [
+    {
+      "role": "asset",
+      "model": "product.template",
+      "record_id": 1,
+      "audit_log_id": 1,
+      "actor": [
+        17,
+        "Asset Officer - Enkhmend"
+      ],
+      "method": "write",
+      "created_at": "2026-11-16 14:03:14",
+      "old_and_new_values_captured": true,
+      "original_description_restored": true
+    },
+    {
+      "role": "analyst",
+      "model": "project.task",
+      "record_id": 11,
+      "audit_log_id": 3,
+      "actor": [
+        18,
+        "Risk Analyst - Enkhmend"
+      ],
+      "method": "write",
+      "created_at": "2026-11-16 14:03:16",
+      "old_and_new_values_captured": true,
+      "original_description_restored": true
+    },
+    {
+      "role": "responder",
+      "model": "helpdesk.ticket",
+      "record_id": 1,
+      "audit_log_id": 5,
+      "actor": [
+        19,
+        "Incident Responder - Enkhmend"
+      ],
+      "method": "write",
+      "created_at": "2026-11-16 14:03:18",
+      "old_and_new_values_captured": true,
+      "original_description_restored": true
+    }
+  ],
+  "scope": "Create/write/delete/export on four selected models; reads and login events are not logged by these rules."
+}

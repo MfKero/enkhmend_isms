@@ -1,0 +1,42 @@
+{
+  "ticket_id": 1,
+  "ticket": "ТУРШИЛТ — Өвчтөний мэдээлэл рүү сэжигтэй хандалт",
+  "events": [
+    {
+      "stage": "Incident",
+      "stage_id": 7,
+      "actor_id": 19,
+      "verified_at_utc": "2026-11-16T14:14:50.363440+00:00",
+      "closed": false
+    },
+    {
+      "stage": "Report",
+      "stage_id": 8,
+      "actor_id": 19,
+      "verified_at_utc": "2026-11-16T14:14:50.446591+00:00",
+      "closed": false
+    },
+    {
+      "stage": "Investigate",
+      "stage_id": 9,
+      "actor_id": 19,
+      "verified_at_utc": "2026-11-16T14:14:50.518363+00:00",
+      "closed": false
+    },
+    {
+      "stage": "Resolve",
+      "stage_id": 10,
+      "actor_id": 19,
+      "verified_at_utc": "2026-11-16T14:14:50.596651+00:00",
+      "closed": false
+    },
+    {
+      "stage": "Close",
+      "stage_id": 11,
+      "actor_id": 19,
+      "verified_at_utc": "2026-11-16T14:14:50.681737+00:00",
+      "closed": true
+    }
+  ],
+  "exercise_only": true
+}
