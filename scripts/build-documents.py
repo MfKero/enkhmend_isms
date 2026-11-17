@@ -1,4 +1,6 @@
-import html,json,re
+import html,json,re,os,sys
+sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
+from mn_terms import mn
 from pathlib import Path
 from collections import Counter
 from reportlab.pdfbase import pdfmetrics
@@ -23,8 +25,12 @@ BACKUP=json.loads((ROOT/'backup-restore-verification.json').read_text())
 AUDIT=json.loads((ROOT/'audit-verification.json').read_text(encoding='utf-8'))
 RBAC=json.loads((ROOT/'rbac-verification.json').read_text())
 EXERCISE=json.loads((ROOT/'incident-exercise.json').read_text(encoding='utf-8'))
-pdfmetrics.registerFont(TTFont('Arial','C:/Windows/Fonts/arial.ttf'))
-pdfmetrics.registerFont(TTFont('Arial-Bold','C:/Windows/Fonts/arialbd.ttf'))
+_FONTS=[('C:/Windows/Fonts/arial.ttf','C:/Windows/Fonts/arialbd.ttf'),
+        ('/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf','/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf'),
+        ('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf','/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf')]
+_reg,_bold=next(f for f in _FONTS if os.path.exists(f[0]))
+pdfmetrics.registerFont(TTFont('Arial',_reg))
+pdfmetrics.registerFont(TTFont('Arial-Bold',_bold))
 pdfmetrics.registerFontFamily('Arial',normal='Arial',bold='Arial-Bold',italic='Arial',boldItalic='Arial-Bold')
 styles=getSampleStyleSheet()
 styles.add(ParagraphStyle(name='BodyMN',fontName='Arial',fontSize=10.2,leading=14.7,spaceAfter=7,textColor=colors.black))
@@ -36,11 +42,11 @@ styles.add(ParagraphStyle(name='TableHeadMN',parent=styles['TableMN'],fontName='
 W,H=A4;CW=W-96
 
 def esc(s):return html.escape(str(s)).replace('\n','<br/>')
-def p(text):return ('p',text)
-def h(text):return ('h',text)
-def t(headers,rows,widths=None):return ('table',headers,rows,widths)
-def im(name,caption,width=CW):return ('image',name,caption,width)
-def page(title,*items):return {'title':title,'items':list(items)}
+def p(text):return ('p',mn(text))
+def h(text):return ('h',mn(text))
+def t(headers,rows,widths=None):return ('table',[mn(x) for x in headers],[[mn(x) for x in r] for r in rows],widths)
+def im(name,caption,width=CW):return ('image',name,mn(caption),width)
+def page(title,*items):return {'title':mn(title),'items':list(items)}
 def risk_score(r):
     l=re.search(r'Likelihood:\s*(\d)',r['description']);i=re.search(r'Impact:\s*(\d)',r['description'])
     return (int(l.group(1)) if l else 0,int(i.group(1)) if i else 0)
@@ -134,7 +140,7 @@ matrix=[]
 for l in range(5,0,-1):
     row=[str(l)]
     for i in range(1,6):
-        ids=[re.match('EM-R\d+',r['name']).group(0) for r in DATA['risks'] if risk_score(r)==(l,i)]
+        ids=[re.match(r'EM-R\d+',r['name']).group(0) for r in DATA['risks'] if risk_score(r)==(l,i)]
         row.append(str(l*i)+(' / '+', '.join(ids) if ids else ''))
     matrix.append(row)
 pages.append(page('Эрсдэлийн үнэлгээний аргачлал',
@@ -149,7 +155,7 @@ for part in range(2):
         l,i=risk_score(r)
         threat=section(r['description'],'Threat',['Vulnerability','Likelihood'])
         vuln=section(r['description'],'Vulnerability',['Likelihood','Impact'])
-        items += [h(r['name']),p('Threat: '+threat),p('Vulnerability: '+vuln),p(f'Likelihood {l} × Impact {i} = {l*i}. '+('High' if l*i>=15 else 'Medium')+'. Owner: Risk Analyst. Stage: Assessed.')]
+        items += [h(r['name']),p('Аюул (Threat): '+threat),p('Эмзэг байдал (Vulnerability): '+vuln),p(f'Магадлал {l} × Нөлөөлөл {i} = {l*i} оноо, түвшин: '+('High' if l*i>=15 else 'Medium')+'. Эзэн: Risk Analyst. Үе шат: Assessed.')]
     pages.append(page('Эрсдэлийн дэлгэрэнгүй бүртгэл '+str(part+1),*items))
 
 treatrows=[]
@@ -157,7 +163,7 @@ for r in DATA['risks']:
     treatment=section(r['description'],'Treatment Plan',['Related ISO Controls','Completion Evidence','Assessment Basis'])
     if not treatment:treatment=section(r['description'],'Treatment',['Related Controls','Likelihood','Assessment Basis'])
     treatment=re.sub(r'\s+',' ',treatment)
-    treatrows.append([re.match('EM-R\d+',r['name']).group(0),treatment,'Risk Analyst','2026-12-16'])
+    treatrows.append([re.match(r'EM-R\d+',r['name']).group(0),treatment,'Risk Analyst','2026-12-16'])
 pages.append(page('Эрсдэлийн treatment төлөвлөгөө',
     p('Бүх эрсдэлийг Assessed шатанд байрлуулж, Risk Analyst-д оноосон. Хугацааг 2026-12-16 гэж сургалтын backlog-д өгсөн. Энэ нь бодит эмнэлгийн баталсан төсөв, үүрэг амлалт биш.'),
     t(['Risk','Төлөвлөсөн арга хэмжээ','Owner','Хугацаа'],treatrows,[.13,.57,.15,.15]),
@@ -220,7 +226,7 @@ pages.append(page('Backup ба сэргээх туршилт',
 
 for code,policy in DATA['policies'].items():
     for part in range(2):
-        items=[p(code+'  Хувилбар 1.0  Эзэмшигч ISMS Manager  Төлөв Draft approval pending')]
+        items=[p(code+'  · Хувилбар 1.0 · Эзэмшигч: ISMS Manager · Төлөв: ноорог, батлагдаагүй')]
         for title,text in policy['sections'][part*4:(part+1)*4]:items += [h(title),p(text)]
         pages.append(page(policy['title']+' '+str(part+1),*items))
 
@@ -241,7 +247,7 @@ def pdf_table(headers,rows,widths):
         ('ROWBACKGROUNDS',(0,1),(-1,-1),[colors.white,colors.HexColor('#F2F6F9')]),
         ('GRID',(0,0),(-1,-1),.45,colors.HexColor('#D9D9D9')),('VALIGN',(0,0),(-1,-1),'MIDDLE'),
         ('LEFTPADDING',(0,0),(-1,-1),6),('RIGHTPADDING',(0,0),(-1,-1),6),
-        ('TOPPADDING',(0,0),(-1,-1),5),('BOTTOMPADDING',(0,0),(-1,-1),5)]))
+        ('TOPPADDING',(0,0),(-1,-1),4),('BOTTOMPADDING',(0,0),(-1,-1),4)]))
     return table
 def footer(canvas,doc):
     canvas.setFont('Arial',8);canvas.setFillColor(colors.HexColor('#56616B'))
@@ -260,7 +266,8 @@ def create_pdf(path,specs):
             elif item[0]=='image':
                 f=ROOT/'screenshots'/item[1]
                 iw,ih=PILImage.open(f).size
-                width=min(item[3],450 if sum(x[0]=='image' for x in spec['items'])>1 else CW);height=width*ih/iw
+                width=item[3];height=width*ih/iw
+                if height>330:width=width*330/height;height=330
                 story.extend([Image(str(f),width=width,height=height),Paragraph(esc(item[2]),styles['SmallMN']),Spacer(1,5)])
     doc.build(story,onFirstPage=footer,onLaterPages=footer)
 
@@ -306,7 +313,7 @@ def create_docx(path,specs):
                 repeat=OxmlElement('w:tblHeader');table.rows[0]._tr.get_or_add_trPr().append(repeat)
                 doc.add_paragraph('')
             elif item[0]=='image':
-                doc.add_picture(str(ROOT/'screenshots'/item[1]),width=Inches(5.9 if sum(x[0]=='image' for x in spec['items'])>1 else 6.65))
+                doc.add_picture(str(ROOT/'screenshots'/item[1]),width=Inches(6.65))
                 cap=doc.add_paragraph(item[2]);cap.paragraph_format.space_after=Pt(4)
                 for run in cap.runs:run.font.size=Pt(8)
     doc.save(path)
@@ -316,7 +323,7 @@ create_docx(OUT/'Enkhmend-ISMS-Report.docx',pages)
 for code,policy in DATA['policies'].items():
     specs=[]
     for part in range(2):
-        items=[p(code+'  Хувилбар 1.0  Эзэмшигч ISMS Manager  Төлөв Draft approval pending')]
+        items=[p(code+'  · Хувилбар 1.0 · Эзэмшигч: ISMS Manager · Төлөв: ноорог, батлагдаагүй')]
         for title,text in policy['sections'][part*4:(part+1)*4]:items.extend([h(title),p(text)])
         specs.append(page(policy['title']+' '+str(part+1),*items))
     create_pdf(OUT/(code+'.pdf'),specs);create_docx(OUT/(code+'.docx'),specs)

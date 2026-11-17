@@ -10,7 +10,8 @@ Odoo Community 19 дээр ISO/IEC 27001:2022-ийн сонгосон шаард
 - [Мэдээллийн аюулгүй байдлын бодлого](deliverables/POL-01.pdf), [Word](deliverables/POL-01.docx)
 - [Хандалтын удирдлагын бодлого](deliverables/POL-02.pdf), [Word](deliverables/POL-02.docx)
 - [Эрсдэлийг бууруулах төлөвлөгөө](deliverables/POL-03.pdf), [Word](deliverables/POL-03.docx)
-- [Хөрөнгө](docs/asset-register.csv), [эрсдэл](docs/risk-register.csv), [25 control ба SoA](docs/controls-soa.csv)
+- [Хөрөнгө](docs/asset-register.csv), [эрсдэл](docs/risk-register.csv), [25 хяналт ба SoA](docs/controls-soa.csv)
+- [Хамгаалалтын бэлтгэл: Odoo дээр гараар үзүүлэх заавар](ХАМГААЛАЛТ.md)
 
 ## Бодит хэрэгжилт
 
@@ -21,7 +22,7 @@ Database: `enkhmend_isms`. Веб: `http://localhost:8069`.
 | Assets | EM-AST-01–10, owner/classification/location/risk metadata |
 | Risks | EM-R01–10, Threat/Vulnerability/Treatment, 6 High ба 4 Medium |
 | Risk workflow | Identified, Assessed, Treating, Reviewed, Closed гэсэн тусдаа stage |
-| Controls ба SoA | 25 сонгосон control: 4 Implemented, 17 Partial, 4 Planned |
+| Controls ба SoA | 25 сонгосон хяналт: 4 Implemented, 17 Partial, 4 Planned |
 | Policies | 3 Draft, approval pending |
 | Incident | HT00001 сургалтын simulation, таван stage, Close |
 | Access | 5 operational role, 38 ORM test, 5 HTTP login, Viewer write denied |
@@ -57,7 +58,9 @@ Script-үүдийн зориулалт:
 | `scripts/exercise-incident.py` | Simulation ticket-ийн таван live stage transition |
 | `scripts/backup-restore.py` | pg_dump, filestore zip, тусдаа DB restore ба count/hash шалгах |
 | `scripts/verify-final.py` | 10/10/25/3 counts, 6 audit rule, Close ticket, governance ACL |
-| `scripts/build-documents.py` | Source JSON, screenshot-оос PDF/DOCX үүсгэх |
+| `scripts/build-documents.py` | Source JSON, screenshot-оос PDF/DOCX үүсгэх (Windows-д Arial, Linux-д Liberation/DejaVu фонт) |
+| `scripts/mn_terms.py` | Тайлангийн англи нэр томьёог монгол болгох толь |
+| `scripts/export-csv.py` | `docs/*.csv`-г цэгцтэй баганатай дахин үүсгэх |
 | `scripts/build-presentation.mjs` | Bundled Artifact Tool ашигласан PPTX authoring source, runtime зам нь тухайн компьютерт хамаарна |
 
 Native Odoo Python-аар live шалгах жишээ:
@@ -71,7 +74,7 @@ Setup script-үүдийг сургалтын орчинд ажиллуулна. 
 
 ## Нотолгоо
 
-`screenshots/` нь ажиллаж буй Odoo UI-ээс авсан бодит PNG. JSON файлууд нь туршилтын үр дүн. Audit row-ийг гараар зохиож үүсгээгүй. Backup-ийн 12.19 секунд нь локал dump/restore/count/hash pipeline, бизнесийн баталсан RTO биш. Restored web login, production failover болон offsite recovery хийгдээгүй.
+`screenshots/` нь ажиллаж буй Odoo UI-ээс авсан бодит PNG. Хөтчийн хувийн табууд (бусад сайт) болон доод хоосон зайг тайрсан, Odoo-ийн агуулгад өөрчлөлт ороогүй. Анхны хувилбар git түүхэнд бий. JSON файлууд нь туршилтын үр дүн. Audit row-ийг гараар зохиож үүсгээгүй. Backup-ийн 12.19 секунд нь локал dump/restore/count/hash pipeline, бизнесийн баталсан RTO биш. Restored web login, production failover болон offsite recovery хийгдээгүй.
 
 `.private/`, `odoo.conf`, password, database dump, filestore backup, log болон Word lock file Git-д орохгүй.
 
@@ -84,4 +87,4 @@ Setup script-үүдийг сургалтын орчинд ажиллуулна. 
 | | | |
 | | | |
 
-AI тусламжаар тохиргоо, тест, бодлогын ноорог, тайлан, танилцуулгыг бэлтгэсэн. Баг хэрэгжилтээ шалгаж, ойлгож, өөрийн хувь нэмрийг үнэн зөв тэмдэглэн хамгаална.
+Тохиргооны скрипт, тест, бодлогын ноорог, тайлан, танилцуулгыг бэлтгэхэд AI (Codex, Claude) хэрэгслийн тусламж авсан. Баг хэрэгжилтээ шалгаж, ойлгож, өөрийн хувь нэмрийг үнэн зөв тэмдэглэн хамгаална. Хамгаалалтад [ХАМГААЛАЛТ.md](ХАМГААЛАЛТ.md)-ийн дагуу Odoo дээр гараар үзүүлж бэлдэнэ.

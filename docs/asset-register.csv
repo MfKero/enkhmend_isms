@@ -1,11 +1,11 @@
-﻿Code,Asset,Notes
-EM-AST-01,Өвчтөний мэдээллийн сан,"<div data-oe-version=""2.0"">Owner: IT хариуцсан ажилтан</div><div>Classification: Restricted</div><div>Location: Энхмэнд эмнэлгийн үндсэн сервер</div><div>Risk: High</div><div>Purpose: Өвчтөний мэдээллийг хадгалах</div>"
-EM-AST-02,Лабораторийн хариуны сан,"<div data-oe-version=""2.0"">Owner: Лабораторийн эрхлэгч</div><div>Classification: Restricted</div><div>Location: Энхмэнд эмнэлгийн лабораторийн систем</div><div>Risk: High</div><div>Purpose: Лабораторийн шинжилгээний хариуг хадгалах</div>"
-EM-AST-03,Эмнэлгийн үндсэн сервер,"<div data-oe-version=""2.0"">Owner: IT ажилтан</div><div>Classification: Confidential</div><div>Location: Серверийн өрөө</div><div>Risk: High</div><div>Purpose: Эмнэлгийн мэдээллийн систем болон мэдээллийн санг ажиллуулах.</div>"
-EM-AST-04,Эмчийн компьютер,"<div data-oe-version=""2.0"">Owner: Тасгийн эрхлэгч</div><div>Classification: Confidential</div><div>Location: Үзлэгийн өрөө</div><div>Risk: High</div><div>Purpose: Эмч өвчтөний мэдээлэлтэй ажиллах, үзлэгийн тэмдэглэл оруулах.</div>"
-EM-AST-05,Бүртгэлийн компьютер,"<div data-oe-version=""2.0"">Owner: Бүртгэлийн ахлах</div><div>Classification: Confidential</div><div>Location: Хүлээн авах хэсэг</div><div>Risk: High</div><div>Purpose: Өвчтөнийг бүртгэх, цаг товлох, бүртгэлийн мэдээлэл боловсруулах.</div>"
-EM-AST-06,Backup төхөөрөмж/сан,"<div data-oe-version=""2.0"">Owner: IT ажилтан</div><div>Classification: Restricted</div><div>Location: Нөөц хадгалалт</div><div>Risk: High</div><div>Purpose: Эмнэлгийн систем, мэдээллийн сангийн нөөц хуулбарыг хадгалах, шаардлагатай үед сэргээх.</div>"
-EM-AST-07,"Firewall, Router","<div data-oe-version=""2.0"">Owner: Сүлжээний ажилтан</div><div>Classification: Confidential</div><div>Location: Сүлжээний шүүгээ</div><div>Risk: High</div><div>Purpose: Эмнэлгийн сүлжээний холболт, урсгал болон гаднын хандалтыг удирдах.</div>"
-EM-AST-08,Ажилтны мэдээллийн сан,"<div data-oe-version=""2.0"">Owner: Хүний нөөц</div><div>Classification: Confidential</div><div>Location: HR систем</div><div>Risk: Medium</div><div>Purpose: Ажилтны бүртгэл, албан тушаал болон хөдөлмөрийн харилцааны мэдээллийг хадгалах.</div>"
-EM-AST-09,Төлбөр тооцооны бүртгэл,"<div data-oe-version=""2.0"">Owner: Нягтлан</div><div>Classification: Confidential</div><div>Location: Санхүүгийн систем</div><div>Risk: Medium</div><div>Purpose: Эмнэлгийн үйлчилгээний төлбөр, нэхэмжлэл болон санхүүгийн гүйлгээний бүртгэлийг хадгалах.</div>"
-EM-AST-10,Системийн audit logs,"<div data-oe-version=""2.0"">Owner: Аюулгүй байдлын хариуцагч</div><div>Classification: Restricted</div><div>Location: Логийн сан</div><div>Risk: High</div><div>Purpose: Системийн хэрэглэгчийн үйлдэл, өөрчлөлтийг бүртгэж, хяналт болон зөрчлийн шинжилгээнд ашиглах.</div>"
+﻿Код,Хөрөнгө,Эзэмшигч,Ангилал,Байршил,Эрсдэл,Зориулалт
+EM-AST-01,Өвчтөний мэдээллийн сан,IT хариуцсан ажилтан,Restricted,Энхмэнд эмнэлгийн үндсэн сервер,High,Өвчтөний мэдээллийг хадгалах
+EM-AST-02,Лабораторийн хариуны сан,Лабораторийн эрхлэгч,Restricted,Энхмэнд эмнэлгийн лабораторийн систем,High,Лабораторийн шинжилгээний хариуг хадгалах
+EM-AST-03,Эмнэлгийн үндсэн сервер,IT ажилтан,Confidential,Серверийн өрөө,High,Эмнэлгийн мэдээллийн систем болон мэдээллийн санг ажиллуулах.
+EM-AST-04,Эмчийн компьютер,Тасгийн эрхлэгч,Confidential,Үзлэгийн өрөө,High,"Эмч өвчтөний мэдээлэлтэй ажиллах, үзлэгийн тэмдэглэл оруулах."
+EM-AST-05,Бүртгэлийн компьютер,Бүртгэлийн ахлах,Confidential,Хүлээн авах хэсэг,High,"Өвчтөнийг бүртгэх, цаг товлох, бүртгэлийн мэдээлэл боловсруулах."
+EM-AST-06,Backup төхөөрөмж/сан,IT ажилтан,Restricted,Нөөц хадгалалт,High,"Эмнэлгийн систем, мэдээллийн сангийн нөөц хуулбарыг хадгалах, шаардлагатай үед сэргээх."
+EM-AST-07,"Firewall, Router",Сүлжээний ажилтан,Confidential,Сүлжээний шүүгээ,High,"Эмнэлгийн сүлжээний холболт, урсгал болон гаднын хандалтыг удирдах."
+EM-AST-08,Ажилтны мэдээллийн сан,Хүний нөөц,Confidential,HR систем,Medium,"Ажилтны бүртгэл, албан тушаал болон хөдөлмөрийн харилцааны мэдээллийг хадгалах."
+EM-AST-09,Төлбөр тооцооны бүртгэл,Нягтлан,Confidential,Санхүүгийн систем,Medium,"Эмнэлгийн үйлчилгээний төлбөр, нэхэмжлэл болон санхүүгийн гүйлгээний бүртгэлийг хадгалах."
+EM-AST-10,Системийн audit logs,Аюулгүй байдлын хариуцагч,Restricted,Логийн сан,High,"Системийн хэрэглэгчийн үйлдэл, өөрчлөлтийг бүртгэж, хяналт болон зөрчлийн шинжилгээнд ашиглах."
